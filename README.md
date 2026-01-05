@@ -11,7 +11,15 @@ Portanto, o nosso objetivo é evitar toda a parte manual entre vendedor e client
 
 Existem diferentes formas, métodos, técnicas e estratégias para construir aplicações financeiras, você pode ou não incluir banco de dados, sendo que para uma aplicação desse porte é necessário armazenar a maior quantidade de dados possível. Além de se atentar em requisitos técnicos como qualidade, persistência, escalabilidade, disponibilidade e capacidade.
 
+System Design: Construindo um Sistema de Processamento de Pagamentos
+
+Pagamentos online em sites de comércio eletrônico agora são onipresentes. Um site apresenta uma página de pagamento, seu cartão é cobrado e a transação é concluída, aparentemente como mágica. Mas você já se perguntou como seu pagamento realmente passa por vários intermediários, do processador à rede de cartões e ao seu banco antes de ser concluído? Ou já ficou frustrado por ser cobrado duas vezes por uma única compra? Ou se perguntou como o sistema garante que seu pagamento não seja perdido durante o trânsito? 
+
+Vamos projetar um processador de pagamentos com idempotência embutida para evitar cobranças duplicadas e fortes garantias de consistência para garantir que cada transação seja registrada de forma confiável — mesmo quando algo der errado.
+
 Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos técnicos que são teoricamente importantes nesse projeto:
+
+![0_XKum7hiIAFYp7kj2](https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e)
 
 # 💰 POS - Point of Sale
 <img src="https://github.com/user-attachments/assets/dfe9eded-4ec3-4245-9b7d-51500244bad2" align="right" height="77">
