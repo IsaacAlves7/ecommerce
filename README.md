@@ -673,6 +673,30 @@ A **Stone** é uma empresa brasileira de tecnologia e serviços financeiros que 
 - https://online.stone.com.br/docs/o-que-e-o-stone-online
 - Contato da Stone: 3004-9680
 
+## [Gateway] Gateway-Independent Payment Provider (LLD)
+Como projetar uma **Camada de Provedor de Pagamento (Payment Provider Layer)** usando princípios LLD e Padrões de Design para manter a aplicação flexível, extensível e sustentável.
+
+![1_aD2hPfOPysL9W-sP3RUQbw](https://github.com/user-attachments/assets/6f3887fa-cbf8-493d-83c5-3240a5b9199f)
+
+Ao construir uma plataforma de comércio eletrônico ou produto SaaS, integrar um gateway de pagamento é inevitável. Mas associar sua aplicação de forma rígida a um gateway específico se torna uma dívida técnica que vem depois:
+
+- ✔ E se o preço mudar?
+- ✔ E se o gateway falhar durante os eventos de pico?
+- ✔ E se o negócio expandir para vários países, exigindo múltiplos gateways?
+
+Objetivos do Sistema:
+- Seu app não deveria se importar com qual gateway de pagamento é usado.
+- Você deve conseguir trocar o `Razorpay → o Stripe → PayPal` sem mudar o código da empresa.
+- Adicionar um novo gateway deveria ser apenas adicionar uma nova classe adaptadora, não reescrever tudo.
+
+Então você cria:
+
+- Uma interface comum e ciclo de vida → `PaymentBase`
+- Um ponto de entrada para pagamentos → `PaymentProvider`
+- Um Factory para criar um adaptador adequado → `GatewayFactory`
+- Uma classe por gateway → , , `RazorpayAdapterStripeAdapterPayPalAdapter`
+- Um formato de resposta unificado → `PaymentOrderResponse`
+
 ## [Gateway] API Connect Stone 2.0
 O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. O Connect 2.0 é uma camada de integração entre o sistema do Cliente / Parceiro, Software de Gestão, com o POS Stone. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento. Com esta solução, é possível criar pedidos via <a href="https://docs.pagar.me/reference/introdu%C3%A7%C3%A3o-1">API Pagar.me</a>, pagá-los presencialmente pelo **terminal POS** (a maquininha) e receber a resposta das transações em tempo real.
 
