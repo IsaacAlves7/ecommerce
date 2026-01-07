@@ -1188,7 +1188,7 @@ Outro ponto bastante importante é a **TEF House** (ou House de TEF) que é uma 
 
 A **Linx TEF House** é uma solução de Transferência Eletrônica de Fundos (TEF) que oferece a possibilidade de gerenciar transações de pagamento de maneira centralizada. Desenvolvida pela Linx, uma empresa especializada em soluções de tecnologia para o varejo, essa plataforma permite processar e autorizar transações com cartões de crédito, débito, vouchers e outros métodos de pagamento em ambientes de varejo e comércio, seja físico ou digital.
 
-- Contato da Linx: +55 51 9470-1205
+0. **Contato da Linx**: +55 51 9470-1205
 
 1. **Integração Centralizada de Pagamentos**: A Linx TEF House permite que o varejista centralize o processamento de transações de diferentes bandeiras e tipos de pagamento, o que facilita a gestão dos pagamentos. A solução se conecta a várias adquirentes (como Cielo, Rede, Getnet, etc.) e a gateways de pagamento, unificando o processo de autorização em uma única interface.
 
