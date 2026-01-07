@@ -673,7 +673,7 @@ A **Stone** é uma empresa brasileira de tecnologia e serviços financeiros que 
 - https://online.stone.com.br/docs/o-que-e-o-stone-online
 - Contato da Stone: 3004-9680
 
-## [Gateway] Gateway-Independent Payment Provider (LLD)
+## [Gateway] Gateway-Independent Payment Provider
 Como projetar uma **Camada de Provedor de Pagamento (Payment Provider Layer)** usando princípios LLD e Padrões de Design para manter a aplicação flexível, extensível e sustentável.
 
 ![1_aD2hPfOPysL9W-sP3RUQbw](https://github.com/user-attachments/assets/6f3887fa-cbf8-493d-83c5-3240a5b9199f)
