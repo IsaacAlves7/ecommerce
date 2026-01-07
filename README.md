@@ -697,6 +697,270 @@ Então você cria:
 - Uma classe por gateway → , , `RazorpayAdapterStripeAdapterPayPalAdapter`
 - Um formato de resposta unificado → `PaymentOrderResponse`
 
+2. Ciclo de Vida do Pagamento — Análise Profunda: Você apoia explicitamente estas etapas:
+
+1. `CreateOrder`
+2. Verificar o Pagamento
+3. Webhook
+4. Reembolso (opcional, mas parte da base)
+
+1. `CreateOrder` (Criar Ordem) é quando seu backend informa ao gateway:
+
+> "Quero coletar ₹X desse usuário, crie um pedido para ele."
+
+No Gateway de Pagamento, você chama `.instance.orders.create({ ... })`
+
+O que seu código faz:
+
+- As chamadas de controlador/serviço:
+- `paymentProvider.createOrder(options)`
+- `PaymentProvider` encaminha isso para o adaptador selecionado:
+- `return this.#Adapter.createOrder(options);`
+- `RazorpayAdapter.createOrder()` Então:
+- Chamadas de Razorpay SDK
+- Recebe a resposta crua do Razorpay
+- Converte para o formato padrão `PaymentOrderResponse`
+
+Então, não importa qual gateway, seu app sempre mostra:
+
+```json
+{
+  orderId,
+  amount,
+  currency,
+  status,
+  receipt,
+  attempts,
+  created_at,
+  meta
+}
+```
+
+Isso é extremamente importante: o código de negócios nunca toca nas respostas brutas do SDK.
+
+2. Verificar a assinatura do pagamento - Certifique-se de que o pagamento não foi adulterado. Cada provedor implementa sua própria lógica:
+
+Exemplo: Razorpay → verificação de hash HMAC SHA-256.
+
+Então: `paymentProvider.verifyPaymentSignature({ orderId, paymentId, signature })`
+
+retorna ou: True → Marca sucesso do pagamento Pedido de → Falsa Rejeitar (tentativa de fraude) ➡ Garantia de segurança com diferenças mínimas de chamadas
+
+3. Manuseio de Webhook - Webhooks lidam com eventos como:
+
+- Pagamento autorizado
+- Pagamento capturado
+- Processamento do reembolso
+- Pagamento falhou
+- Assinatura cobrada
+
+Esses eventos:
+
+- São enviados pelo Razorpay → seu backend.
+- Não dependa da interface (é bom para confiabilidade).
+- Deve ser verificado criptograficamente
+
+Pontos profundos:
+
+- Você verifica o webhook antes de analisar o JSON (correto para Razorpay).
+- Você usa para evitar o tempo dos ataques.crypto.timingSafeEqual
+- Você normaliza o webhook do gateway em seu próprio formato unificado de evento via .webhookSuccess
+
+Então a camada de controlador/caso de uso não se importa se o Razorpay ou o Stripe dispararam o webhook: Ele sempre obtém: `.{ success, event, provider, orderId, paymentId, amount, ... }`
+
+4. Pagamento do Reembolso
+
+Em:`PaymentBase`
+
+```js
+async refundPayment(refundDetails) {
+  throw new CustomError('refundPayment() must be implemented');
+}
+```
+
+Em:`PaymentProvider`
+
+```js
+async refundPayment(details) {
+  if (this.#Adapter.refundPayment) {
+    return this.#Adapter.refundPayment(details);
+  } else {
+    throw new Error('Refund not supported by this payment gateway');
+  }
+}
+```
+
+Então:
+
+- A lógica de negócios simplesmente chama `paymentProvider.refundPayment({ ... })`
+- O adaptador traduz isso em uma API específica para gateway.
+
+Novamente, comportamento unificado, implementações subjacentes diferentes.
+
+3. Componentes Centrais (LLD): Estrutura de pastas
+
+<pre>
+paymentModule/
+├── PaymentProvider.js
+├── PaymentGateway/
+│   ├── base.js
+│   ├── RazorpayAdapter.js
+│   ├── StripeAdapter.js
+│   ├── PaypalAdapter.js
+│   └── GatewayFactory.js
+└── utils/
+    ├── FormatOrderResponses.js
+</pre>
+
+Padrão de Design:
+
+<img src="https://github.com/user-attachments/assets/8d8af17c-aa19-4ce5-a154-e61f92151c7a" align="right">
+
+```md
+| Pattern  | Implemented Where    | What It Fixes                      |
+| -------- | -------------------- | ---------------------------------- |
+| Template | PaymentBase          | Prevents duplicate lifecycle logic |
+| Adapter  | RazorpayAdapter etc. | SDK differences                    |
+| Factory  | PaymentFactory       | Dependency creation mess           |
+| Strategy | PaymentProvider      | Switching providers at runtime     |
+```
+
+Template Design Pattern: Definido em → (classe abstrata); Subclasses sobrepõem apenas o que varia → fluxo comum permanece intacto `PaymentBase`. Por que esse padrão? Todo gateway de pagamento segue o mesmo ciclo de vida:
+
+```md
+config → createOrder → verifyPayment → webhook → refund
+```
+
+Mas cada gateway faz de forma diferente, então você fornece uma estrutura padrão e força funções essenciais a serem implementadas.
+
+Como funciona no seu código:
+
+```js
+class PaymentBase {
+  config() { throw new Error("must implement"); }
+  async createOrder() { throw new Error("must implement"); }
+  async verifyPaymentSignature() { throw new Error("must implement"); }
+  async webhookHandler() { throw new Error("must implement"); }
+  async refundPayment() { throw new Error("must implement"); }
+}
+```
+
+Cada subclasse deve sobrescrever esses métodos ou falhar → impor correção.
+
+- ✔ Ciclo
+- ✔ de vida de pagamento reutilizável Contrato forte entre sistema e gateways
+- ✔ Evita lógica de negócio duplicada em cada adaptador
+
+```js
+/**
+ * PaymentGateway/base.js
+ * Template Pattern design for payment gateways
+ * Base class for payment gateways
+ * config → createOrder → verify → webhook
+ */
+import { CustomError } from 'zoopse-crm-shared';
+import { PaymentOrderResponse } from './formateClass.js';
+
+class PaymentBase {
+  #processedEventIds = new Set();
+  constructor(config) {
+    this.configData = config || {};
+    this.config();
+  }
+
+  /** Initialize SDK or API client (must override) */
+  config() {
+    throw new CustomError('config() must be implemented by subclass');
+  }
+  /** Create payment order (must override) */
+  async createOrder(orderDetails) {
+    throw new CustomError('createOrder() must be implemented');
+  }
+
+  /** Verify payment (must override) */
+  async verifyPaymentSignature(details) {
+    throw new CustomError('verifyPaymentSignature() must be implemented');
+  }
+
+  /** Gateway webhook handler */
+  async webhookHandler(req) {
+    throw new CustomError('webhookHandler() must be implemented');
+  }
+
+  /** Refund payment (must override) */
+  async refundPayment(refundDetails) {
+    throw new CustomError('refundPayment() must be implemented');
+  }
+
+  /** Convert amount → smallest unit */
+  toSmallestCurrencyUnit(amount) {
+    return Math.round(amount * 100); // ₹ → paise, $ → cents
+  }
+
+  /** Common options used in all payment gateways */
+
+  buildOrderResponse(raw, meta = {}) {
+    if (raw.error) {
+      return {
+        success: false,
+        error: raw.error
+      };
+    }
+    return new PaymentOrderResponse({
+      orderId: raw.orderId,
+      amount: raw.amount,
+      currency: raw.currency,
+      status: raw.status,
+      receipt: raw.receipt,
+      attempts: raw.attempts,
+      created_at: raw.created_at,
+      meta
+    });
+  }
+  checkDuplicateEvent = (eventId) => {
+    if (this.#processedEventIds.has(eventId)) {
+      return true; // Duplicate event
+    }
+    this.#processedEventIds.add(eventId);
+    return false; // New event
+  };
+   /** Handle successful payment (common flow) */
+  async webhookSuccess(webhookData) {
+    if (!webhookData || !webhookData.orderId || !webhookData.paymentId) {
+      throw new CustomError('Invalid webhook data');
+    }
+    const results = {
+      success: true,
+      event: webhookData.event || "payment_success",
+      provider: webhookData.provider,
+      orderId: webhookData.orderId,
+      paymentId: webhookData.paymentId,
+      amount: webhookData.amount,
+      currency: webhookData.currency,
+      status: webhookData.status,
+      meta: webhookData.meta || {},
+      timestamp: Date.now()
+    };
+    console.log("Unified Webhook:", results);
+    return results;
+  }
+}
+
+export default PaymentBase;
+```
+
+Factory Design Pattern: Aplicado em → RazorpayAdapter, StripeAdapter, PayPalAdapter
+
+SDKs de terceiros possuem formatos diferentes de API:
+
+- Razorpay → `orders.create()`
+- Listra → `paymentIntents.create()`
+- PayPal → `orders.capture()`
+
+Suas classes Adapter traduzem esses nomes nos MESMOS métodos definidos no `PaymentBase`.
+
+Por quê? Evitar a criação de objetos dispersos e manter a responsabilidade única.
+
 ## [Gateway] API Connect Stone 2.0
 O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. 
 
