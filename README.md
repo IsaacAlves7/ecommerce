@@ -698,7 +698,11 @@ Então você cria:
 - Um formato de resposta unificado → `PaymentOrderResponse`
 
 ## [Gateway] API Connect Stone 2.0
-O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. O Connect 2.0 é uma camada de integração entre o sistema do Cliente / Parceiro, Software de Gestão, com o POS Stone. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento. Com esta solução, é possível criar pedidos via <a href="https://docs.pagar.me/reference/introdu%C3%A7%C3%A3o-1">API Pagar.me</a>, pagá-los presencialmente pelo **terminal POS** (a maquininha) e receber a resposta das transações em tempo real.
+O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. 
+
+O Connect 2.0 é uma camada de integração entre o sistema do Cliente / Parceiro, Software de Gestão, com o POS Stone. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento. 
+
+Com esta solução, é possível criar pedidos via <a href="https://docs.pagar.me/reference/introdu%C3%A7%C3%A3o-1">API Pagar.me</a>, pagá-los presencialmente pelo **terminal POS** (a maquininha) e receber a resposta das transações em tempo real.
 
 > A realidade do cliente que usa um sistema/ERP sem integração com as transações, e como conseguimos somar forças para melhorar a produtividade do nosso cliente! Para que seu estabelecimento possa ter esta funcionalidade, o primeiro passo é entrar em contato com o seu software de gestão (PDV) e entender com os mesmos se eles já estão integrados no produto. Caso não, o seu sistema de gestão precisa entrar em contato com a Stone por meio do nosso Programa de Parcerias. A ativação e próximos passos serão executados com o Software de Gestão e a equipe de integração da Stone. 
 
