@@ -1100,7 +1100,9 @@ Tipos de Chave:
 # 🤑 TEF - Transferência Eletrônica de Fundos
 <img src="https://github.com/user-attachments/assets/5493eaab-40b5-4f5c-9619-a3bfe31402a2" align="right" height="177">
 
-Inicialmente, utilizariamos a **Transferência Eletrônica de Fundos (TEF)** que é um sistema de pagamentos que faz a comunicação das transações de forma automática e entre diversas adquirentes (as empresas de cartões). O sistema envia os pagamentos de qualquer tipo de cartão para a liquidação financeira de pagamentos pelas operadoras. A TEF permite a integração das vendas em cartão e o sistema de vendas da empresa, sem a necessidade de realizar a conciliação de forma manual ou por meio de um software. Como tudo é feito de forma integrada, a chance de erros é muito menor. 
+Inicialmente, utilizariamos a **Transferência Eletrônica de Fundos (TEF)** que é um sistema de pagamentos que faz a comunicação das transações de forma automática e entre diversas adquirentes (as empresas de cartões). O sistema envia os pagamentos de qualquer tipo de cartão para a liquidação financeira de pagamentos pelas operadoras. 
+
+A TEF permite a integração das vendas em cartão e o sistema de vendas da empresa, sem a necessidade de realizar a conciliação de forma manual ou por meio de um software. Como tudo é feito de forma integrada, a chance de erros é muito menor. 
 
 Fluxo da solução TEF:
 
