@@ -34,11 +34,9 @@ Um ponto crucial nessa integração, é o **POS - Point of Sale (PDV - Ponto de 
 
 Além de transações financeiras, um sistema POS pode integrar funções adicionais, como gerenciamento de inventário, relatórios de vendas e programas de fidelidade de clientes. Então, o hardware de um POS geralmente inclui dispositivos como um terminal de vendas (caixa registradora), **leitores de cartões (PIN pads - Terminais POS - Maquininhas)**, scanners de código de barras, e impressoras de recibos. O software do POS é o que gerencia todo o processo de venda e as operações relacionadas. 
 
-![modelos-maquininhas-stone-compativeis-1](https://github.com/user-attachments/assets/0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3)
-
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
 
-A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
+![modelos-maquininhas-stone-compativeis-1](https://github.com/user-attachments/assets/0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3)
 
 A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma representação física de uma NFe, também conhecida como **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica). A NFe é um documento digital que registra a transação comercial, mas, para facilitar o transporte e conferência da mercadoria, a legislação exige o DANFE, que é uma versão simplificada e impressa da NFe.
 
@@ -280,6 +278,8 @@ Então, se quisermos sintetizar de forma prática:
 Uma **rede de cartões** é uma infraestrutura que conecta emissores de cartões (bancos e instituições financeiras) aos adquirentes (empresas que processam pagamentos para comerciantes). Ela facilita transações com cartões de crédito e débito, garantindo que os pagamentos sejam autorizados e processados corretamente.
 
 As principais redes de cartões incluem Visa, Mastercard, American Express e Discover, que operam globalmente. No Brasil, redes como Elo e Hipercard também são bastante utilizadas. Essas redes desempenham um papel essencial no sistema de pagamentos, definindo regras para transações, taxas e segurança. 
+
+A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
 
 As “bandeiras de cartão” e as “redes de pagamento” muitas vezes se referem às mesmas entidades, mas tecnicamente têm funções específicas dentro do ecossistema de pagamentos. Quando falamos de bandeiras como Visa, Mastercard, American Express, Discover, Elo, Hipercard e Diners Club, estamos nos referindo aos sistemas que licenciam o uso da sua marca em cartões emitidos por bancos e que também gerenciam as regras e a comunicação das transações entre o emissor (banco do cliente) e o adquirente (banco do lojista).
 
