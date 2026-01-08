@@ -566,13 +566,13 @@ define(['N/https', 'N/record'], function(https, record) {
 8. Suporte ao cliente e solução de problemas, mantenha contato com seu provedor de gateway de pagamento para solução de problemas ou atualizações sobre alterações de API. Verifique regularmente se há atualizações no firmware do PinPad ou no SuiteApp de integração de pagamento do NetSuite. Conclusão para integrar com sucesso um PinPad ao NetSuite, você precisará garantir a compatibilidade entre o seu PinPad, gateway de pagamento e o sistema de pagamento do NetSuite. Se não existir um SuiteApp pré-construído, pode ser necessário usar as APIs do SuiteScript e do NetSuite para criar soluções personalizadas. Certifique-se sempre de que sua integração seja segura e compatível com os padrões de processamento de pagamentos.
 
 # 🤝 Gateway de pagamento
-<img src="https://github.com/user-attachments/assets/6218e341-bd90-4f80-99f6-1a0fc6bade37" width="100%"><br>
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/handshake_1f91d.png" align="right" height="77">
 
 Um **gateway de pagamento** é uma tecnologia que permite que empresas aceitem pagamentos online por meio de cartões de crédito, débito e outras formas de pagamento eletrônico. Ele atua como uma ponte entre o site ou aplicativo de uma empresa e as instituições financeiras que processam os pagamentos. Em resumo, um gateway de pagamento é uma tecnologia que permite que empresas aceitem pagamentos online, enquanto plataformas de pagamento eletrônico são empresas que oferecem soluções de pagamento completo. 
 
 Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pagamento e plataforma de pagamento eletrônico, proporcionando uma solução completa para negócios online. Veja abaixo:
 
-<img height="578" align="right" src="https://github.com/user-attachments/assets/fc6eb840-1bda-405c-a805-bb6cc1f139d0" />
+<img height="578" align="right" src="https://github.com/user-attachments/assets/021c250e-58d2-49c8-bba3-44a22228f6cf" />
 
 - <a href="">PagSeguro</a>
 
@@ -595,6 +595,8 @@ Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pag
 - <a href="">Braspag</a>
 
 - <a href="">Coda Payments</a>
+
+- <a href="">Amazon payments</a>
 
 Um gateway de pagamento oferece várias funcionalidades, incluindo:
 
@@ -1076,7 +1078,7 @@ Inicialmente, utilizariamos a **Transferência Eletrônica de Fundos (TEF)** que
 
 Fluxo da solução:
 
-<img src="https://s3.amazonaws.com/helpjuice-static/helpjuice_production%2Fuploads%2Fupload%2Fimage%2F6769%2Fdirect%2F1611069739570-tefstone.PNG"><br>
+<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
 Além da facilidade de integração das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
 
@@ -1185,7 +1187,7 @@ Qualquer dúvida relacionada ao SDK ou a PIN Pad, deve ser reportada ao time de 
 
 Outro ponto bastante importante é a **TEF House** (ou House de TEF) que é uma empresa especializada em fornecer soluções de *Transferência Eletrônica de Fundos* (TEF) no contexto de pagamentos eletrônicos. Essas empresas desenvolvem e oferecem sistemas que integram terminais de pagamento, como máquinas de cartão, aos sistemas de automação comercial de estabelecimentos, facilitando a comunicação entre bancos, operadoras de cartão e o sistema de vendas. A TEF House oferece diversos serviços, como autorização de pagamentos, segurança nas transações, e integração com múltiplas operadoras de cartão, além de garantir o compliance com as normas de segurança, como o PCI-DSS.
 
-<img src="https://github.com/user-attachments/assets/cc060bfc-28e3-4a1d-9653-28a9c1600b5c" align="right" height="77">
+<a href="https://www.linx.com.br/fisico/"><img src="https://github.com/user-attachments/assets/d610ea07-3a66-44ff-a9d3-c31efdd8f99b" align="right" height="77"></a>
 
 A **Linx TEF House** é uma solução de Transferência Eletrônica de Fundos (TEF) que oferece a possibilidade de gerenciar transações de pagamento de maneira centralizada. Desenvolvida pela Linx, uma empresa especializada em soluções de tecnologia para o varejo, essa plataforma permite processar e autorizar transações com cartões de crédito, débito, vouchers e outros métodos de pagamento em ambientes de varejo e comércio, seja físico ou digital.
 
