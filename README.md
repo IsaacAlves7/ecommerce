@@ -487,8 +487,7 @@ O PCI DSS é composto por **12 requisitos** principais, divididos em seis catego
    - Acompanhar e monitorar todo o acesso a recursos de rede e dados do titular do cartão.
    - Testar regularmente os sistemas e processos de segurança.
 
-6. **Manter uma política de segurança da informação**:
-   - Manter uma política que enderece a segurança das informações para todos os colaboradores e fornecedores.
+6. **Manter uma política de segurança da informação**: Manter uma política que enderece a segurança das informações para todos os colaboradores e fornecedores.
 
 As empresas que processam transações com cartão de pagamento são classificadas em **quatro níveis de conformidade**, com base no volume de transações anuais que processam:
 
@@ -594,6 +593,8 @@ Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pag
 - <a href="">Zoop</a>
 
 - <a href="">Braspag</a>
+
+- <a href="">Coda Payments</a>
 
 Um gateway de pagamento oferece várias funcionalidades, incluindo:
 
