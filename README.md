@@ -1102,7 +1102,7 @@ Inicialmente, utilizariamos a **Transferência Eletrônica de Fundos (TEF)** que
 
 Fluxo da solução:
 
-<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
+<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/72312afa-3031-449e-be05-0fc78965cdab"></a><br>
 
 Além da facilidade de <a href="https://youtu.be/n3I6lXQYufo">integração</a> das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. 
 
@@ -1111,6 +1111,8 @@ A TEF é geralmente utilizada em redes de lojas como supermercados ou estabeleci
 TEF é a sigla para Transferência Eletrônica de Fundos. Ele é um sistema que possibilita que vendas de crédito, débito ou voucher sejam realizadas de maneira mais eficiente. É importante saber que TEF é um serviço destinado para clientes pessoa jurídica (CNPJ) com vendas acima de R$ 40.000,00 por mês. Este valor pode ser de uma unidade ou a soma de algumas unidades do estabelecimento comercial (matriz + filiais). Se o seu negócio não possui CNPJ, portanto classificado como pessoa física (CPF) procure sobre os produtos POS ou TON.
 
 Principais vantagens da solução TEF:
+
+<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
 1. Por ser um produto multiadquirente, permite que um mesmo ponto de venda possa ser configurado para uso de várias adquirentes (Stone, Cielo, GetNet, etc), preservando as particularidades do serviço de cada uma delas.
  
