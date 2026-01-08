@@ -981,6 +981,8 @@ Suas classes Adapter traduzem esses nomes nos MESMOS métodos definidos no `Paym
 Por quê? Evitar a criação de objetos dispersos e manter a responsabilidade única.
 
 ## [Gateway] API Connect Stone 2.0
+<img src="https://github.com/user-attachments/assets/96aeb644-10e9-484b-80ba-6dc99b8b1748" align="right" height="77">
+
 O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. 
 
 O Connect 2.0 é uma camada de integração entre o sistema do Cliente / Parceiro, Software de Gestão, com o POS Stone. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento. 
@@ -999,7 +1001,7 @@ Abaixo, detalhamos um fluxo simplificado em que um PDV interage com a API do Pag
 
 Participantes do fluxo do Connect 2.0:
 
-<img src="https://github.com/user-attachments/assets/8c47b70c-7927-418d-b7a3-476cf791ea45" align="right" height="177">
+<img src="https://github.com/user-attachments/assets/b9aa1e7a-1e3b-48fc-a0f7-02eaae820923" align="right" height="777">
 
 1. PDV Parceiro (Oracle NetSuite): Mais conhecido também como Software/Sistema de Gestão, este é o participante responsável pela ponte entre a Stone e o Estabelecimento. O software de gestão tem como responsabilidade todo o desenvolvimento da integração com a Stone para implementação do produto. Cabe a ele também a realização de todo o processo de ativação e implantação do produto no estabelecimento comercial. 
 
@@ -1021,9 +1023,9 @@ Por meio da integração com Connect 2.0, conseguimos:
 Hoje, o Connect Stone suporta os seguintes modelos de terminais:
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/4aac0662-5248-4286-abbe-1acafc7e78d3">
+<img src="https://github.com/user-attachments/assets/aaf78ab8-96b6-4bcf-8a4d-ff023a919280" height="377">
 
-<sub><b>A8, P2 e L3</b> (Recomendado por melhor performance com o produto integrado)</sub>
+<!-- <sub><b>A8, P2 e L3</b> (Recomendado por melhor performance com o produto integrado)</sub> -->
 </div>
 
 A operação é feita através da:
@@ -1222,11 +1224,9 @@ A **Linx TEF House** é uma solução de Transferência Eletrônica de Fundos (T
    - Linx TEF House oferece funcionalidades de monitoramento e geração de relatórios detalhados sobre as transações processadas. Isso permite que os varejistas acompanhem o desempenho de vendas, taxas de aprovação e falhas de transações em tempo real.
    - Inclui funcionalidades para consulta, cancelamento e reimpressão de comprovantes, facilitando a gestão de transações diretamente pelo sistema.
 
-5. **Flexibilidade de Integração com Sistemas de PDV**:
-   - A TEF House pode ser integrada a diferentes sistemas de ponto de venda (PDV), seja por APIs, SDKs ou módulos específicos de integração, facilitando a adoção em ambientes variados de varejo.
+5. **Flexibilidade de Integração com Sistemas de PDV**: A TEF House pode ser integrada a diferentes sistemas de ponto de venda (PDV), seja por APIs, SDKs ou módulos específicos de integração, facilitando a adoção em ambientes variados de varejo.
 
-6. **Redução de Custos Operacionais**:
-   - Como a Linx TEF House centraliza todas as operações de pagamento, ela pode reduzir a necessidade de múltiplos dispositivos e provedores de serviço, diminuindo os custos operacionais e melhorando a experiência de pagamento.
+6. **Redução de Custos Operacionais**: Como a Linx TEF House centraliza todas as operações de pagamento, ela pode reduzir a necessidade de múltiplos dispositivos e provedores de serviço, diminuindo os custos operacionais e melhorando a experiência de pagamento.
 
 Para implementar a Linx TEF House, o varejista conecta o sistema de PDV à plataforma Linx TEF, que passa a gerenciar as comunicações entre o PDV e os adquirentes de pagamento. Com isso, o processo é algo como:
 
@@ -1299,9 +1299,9 @@ Tarefas: Consulta de cards relacionados a vendas ou pagamentos pendentes. Atuali
 2. Dados do pedido e do cliente são enviados (ex: valor total, método de pagamento) = nosso comprovante.
 3. A aplicação aguarda a resposta da transação (aprovada/rejeitada).
 
-4. (if) Caso o pagamento seja aprovado: A aplicação recebe os detalhes da transação (ID da transação, status). O pagamento é registrado no Oracle NetSuite PDV.
+4. (`if`) Caso o pagamento seja aprovado: A aplicação recebe os detalhes da transação (ID da transação, status). O pagamento é registrado no Oracle NetSuite PDV.
 
-5. (else) Caso o pagamento seja rejeitado: O status é atualizado no Pipefy e uma notificação pode ser enviada para reprocessar ou solicitar novo pagamento.
+5. (`else`) Caso o pagamento seja rejeitado: O status é atualizado no Pipefy e uma notificação pode ser enviada para reprocessar ou solicitar novo pagamento.
 
 3.3. Atualização no Oracle NetSuite PDV
 Com o pagamento aprovado, o sistema atualiza o Oracle NetSuite PDV:
