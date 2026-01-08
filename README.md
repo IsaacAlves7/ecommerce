@@ -46,16 +46,16 @@ Aqui estão os principais aspectos da impressão de NFe:
 1. **Chave de Acesso e Código de Barras**: O DANFE inclui a **chave de acesso**, que é um código numérico que permite consultar a NFe na Secretaria da Fazenda (SEFAZ) pela internet.
 Também possui um **código de barras**, facilitando a leitura e conferência das informações por meio de leitores ópticos.
 
-
 1. **Finalidade da Impressão de NFe**: A impressão permite a conferência visual das informações da NFe, o que é útil em casos de fiscalização ou auditoria. Serve como comprovante para o consumidor e como registro da operação, embora o documento digital seja o que possui validade fiscal.
 
-
 1. **Diferença entre DANFE e NFe**: O DANFE não possui validade fiscal, apenas a NFe eletrônica registrada nos sistemas da SEFAZ tem. O DANFE é um resumo e representação visual da NFe para fins de transporte e conferência, enquanto a NFe digital contém todos os dados fiscais.
-
 
 5. **Softwares para Impressão de NFe**: Muitas empresas utilizam sistemas integrados de ERP ou software específico para emissão de NFe que também geram o DANFE automaticamente, facilitando a impressão e o armazenamento.
 
 A impressão de NFe em forma de DANFE é, portanto, uma forma prática e legalmente exigida de registrar as transações e garantir a segurança no transporte de mercadorias, mantendo a validade fiscal da NFe digital armazenada.
+
+> [!Warning]
+> A nota/comprovante impresso pela maquininha de cartão não é nota fiscal e não substitui uma nota fiscal em nenhum cenário legal ou contábil no Brasil. Ela é apenas um comprovante de pagamento.
 
 Em resumo, o POS é essencial para a operação de qualquer comércio que precise registrar e gerenciar suas vendas e pagamentos, sendo fundamental para o controle do fluxo financeiro e a organização interna da empresa. Existem diferentes tipos de sistemas de POS (Point of Sale), que variam conforme o porte do negócio, o setor e as necessidades específicas de cada operação. Aqui estão os principais tipos de POS:
 
@@ -1087,15 +1087,13 @@ Tipos de Chave:
 > 🚧 **Ambiente de Sandbox**: O ambiente de testes é aplicável somente no ambiente de criação de pedidos na API do Pagar.me. Dado que não possuímos ambiente de testes na Stone, os pedidos criados no Pagar.me em ambiente de Sandbox não serão refletidos no POS. Com isso, não possuímos um ambiente de Sandbox para realizar testes de ponta a ponta no Connect Stone. e os pedidos devem ser criados diretamente no ambiente de produção.
 
 # 🤑 TEF - Transferência Eletrônica de Fundos
-https://youtu.be/n3I6lXQYufo
-
 Inicialmente, utilizariamos a **Transferência Eletrônica de Fundos (TEF)** que é um sistema de pagamentos que faz a comunicação das transações de forma automática e entre diversas adquirentes (as empresas de cartões). O sistema envia os pagamentos de qualquer tipo de cartão para a liquidação financeira de pagamentos pelas operadoras. A TEF permite a integração das vendas em cartão e o sistema de vendas da empresa, sem a necessidade de realizar a conciliação de forma manual ou por meio de um software. Como tudo é feito de forma integrada, a chance de erros é muito menor. 
 
 Fluxo da solução:
 
 <a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
-Além da facilidade de integração das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
+Além da facilidade de <a href="https://youtu.be/n3I6lXQYufo">integração</a> das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
 
 TEF é a sigla para Transferência Eletrônica de Fundos. Ele é um sistema que possibilita que vendas de crédito, débito ou voucher sejam realizadas de maneira mais eficiente. É importante saber que TEF é um serviço destinado para clientes pessoa jurídica (CNPJ) com vendas acima de R$ 40.000,00 por mês. Este valor pode ser de uma unidade ou a soma de algumas unidades do estabelecimento comercial (matriz + filiais). Se o seu negócio não possui CNPJ, portanto classificado como pessoa física (CPF) procure sobre os produtos POS ou TON.
 
