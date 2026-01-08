@@ -598,20 +598,22 @@ Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pag
 
 - <a href="">Amazon payments</a>
 
+- <a href="">PayU</a>
+
+- <a href="">Rede</a>
+
 Um gateway de pagamento oferece várias funcionalidades, incluindo:
 
 1. Processamento de transações: O gateway de pagamento processa as transações de pagamento em tempo real.
 2. Segurança: O gateway de pagamento oferece recursos de segurança avançados para proteger as informações de pagamento dos clientes.
 3. Integração com plataformas: O gateway de pagamento pode ser integrado a plataformas de e-commerce e outros sistemas.
 
+![gateway-de-pagamento-task-internet-1-768x384](https://github.com/user-attachments/assets/a5b28b6a-5392-4a59-8c62-c69280d0b4ff)
+
 A principal diferença entre um gateway de pagamento e plataformas de pagamento eletrônico como Stripe, Stone, PayPal e Mercado Pago é que:
 
-1. Gateway de pagamento: É uma tecnologia que permite que empresas aceitem pagamentos online, mas não necessariamente processa os pagamentos em si.
-2. Plataformas de pagamento eletrônico: São empresas que oferecem soluções de pagamento completo, incluindo processamento de transações, gestão de contas e segurança.
-
-Alguns exemplos de gateways de pagamento incluem: PayU, Cielo, Rede e etc.
-
-Já as plataformas de pagamento eletrônico incluem: Stripe, Stone, PayPal, Mercado Pago, etc.
+1. Gateway de pagamento: É uma tecnologia que permite que empresas aceitem pagamentos online, mas não necessariamente processa os pagamentos em si. Alguns exemplos de gateways de pagamento incluem: PayU, Cielo, Rede e etc.
+2. Plataformas de pagamento eletrônico: São empresas que oferecem soluções de pagamento completo, incluindo processamento de transações, gestão de contas e segurança. Já as plataformas de pagamento eletrônico incluem: Stripe, Stone, PayPal, Mercado Pago, etc.
 
 Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a plataforma é um sistema mais completo que ajuda a gerenciar as transações. Algumas empresas oferecem apenas gateways, enquanto outras têm plataformas que incluem gateways como parte de um serviço mais amplo.
 
