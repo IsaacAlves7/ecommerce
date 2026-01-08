@@ -998,7 +998,7 @@ Com esta solução, é possível criar pedidos via API Pagar.me (integrada em se
 Abaixo, detalhamos um fluxo simplificado em que um PDV interage com a API do Pagar.me para que um pedido criado seja pago presencialmente através da maquininha. Fluxo da Solução:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/ff388bad-b4e9-4a1f-8318-a40b04d9108b">
+  <img src="https://github.com/user-attachments/assets/532e9ecd-043e-47e8-86fd-387e58ce5ef3">
 </div>
 
 Participantes do fluxo do Connect 2.0:
@@ -1100,7 +1100,9 @@ Fluxo da solução:
 
 <a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
-Além da facilidade de <a href="https://youtu.be/n3I6lXQYufo">integração</a> das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
+Além da facilidade de <a href="https://youtu.be/n3I6lXQYufo">integração</a> das informações e da possibilidade de aceitar diversos cartões com um só equipamento, o processamento dos pagamentos por meio de TEF costuma ser mais barato. Trabalhar com TEF costuma ser a melhor opção para empresas que realizam as vendas dentro da própria loja, com processamento em caixa, e que têm uma alta taxa de recebimento em cartões. 
+
+A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
 
 TEF é a sigla para Transferência Eletrônica de Fundos. Ele é um sistema que possibilita que vendas de crédito, débito ou voucher sejam realizadas de maneira mais eficiente. É importante saber que TEF é um serviço destinado para clientes pessoa jurídica (CNPJ) com vendas acima de R$ 40.000,00 por mês. Este valor pode ser de uma unidade ou a soma de algumas unidades do estabelecimento comercial (matriz + filiais). Se o seu negócio não possui CNPJ, portanto classificado como pessoa física (CPF) procure sobre os produtos POS ou TON.
 
