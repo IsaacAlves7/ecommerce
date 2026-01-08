@@ -132,6 +132,8 @@ Temos muitas soluções de pagamentos automatizados para a emição de comprovan
 <img width="1100" height="620" alt="pos-(1)" src="https://github.com/user-attachments/assets/b456734c-2f0a-4a57-9bf6-e1644c76d4c2" />
 
 # 🏦 Banco
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/bank_1f3e6.png" align="right" height="77">
+
 No ecossistema de pagamentos com cartão, o **banco emissor** e o **banco adquirente** são dois pilares fundamentais que atuam em lados opostos da transação, cada um com um papel distinto e essencial para que uma compra seja autorizada e concluída com sucesso. Sua relação é uma dança coreografada que acontece em segundos.
 
 O **banco emissor** é o banco do **consumidor**, o portador do cartão. É a instituição financeira que emitiu o cartão de crédito ou débito que o cliente utiliza na hora da compra. Suas responsabilidades primárias são em relação ao consumidor final: ele aprova o crédito do cliente, envia o cartão para ele, gerencia a sua conta (o limite de crédito no caso de cartão de crédito e o saldo da conta no caso de débito) e, o mais crucial no momento da transação, é o **guardião dos fundos**. 
