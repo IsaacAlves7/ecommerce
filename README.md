@@ -19,10 +19,10 @@ Vamos projetar um processador de pagamentos com idempotência embutida para evit
 
 Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos técnicos que são teoricamente importantes nesse projeto:
 
-![0_XKum7hiIAFYp7kj2](https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e)
+<div align="center"><img src="https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e"></div>
 
 > [!Important]
-> É importantíssimo que nesse cenário de System Design seja aplicado com boas técnicas de Design Patterns, Arquiteturas de Software, DDD + TDD + BDD, assim como microsserviços.
+> É importantíssimo que nesse cenário de System Design (Infraestrutura) seja aplicado com boas técnicas de Design Patterns, Arquiteturas de Software, DDD + TDD + BDD, assim como padrões de microsserviços.
 
 > [!Tip]
 > Uma dica que vale a pena ser citada, é que cada negócio funciona de um forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
