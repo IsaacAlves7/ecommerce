@@ -38,6 +38,8 @@ Então, o hardware de um POS geralmente inclui dispositivos como um terminal de 
 
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
 
+Alguns tipos de PINPADs utilizadas em conjunto com o POS:
+
 ![modelos-maquininhas-stone-compativeis-1](https://github.com/user-attachments/assets/0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3)
 
 A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma representação física de uma NFe, também conhecida como **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica). A NFe é um documento digital que registra a transação comercial, mas, para facilitar o transporte e conferência da mercadoria, a legislação exige o DANFE, que é uma versão simplificada e impressa da NFe.
