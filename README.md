@@ -22,7 +22,7 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 ![0_XKum7hiIAFYp7kj2](https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e)
 
 # 💰 POS - Point of Sale
-<img src="https://github.com/user-attachments/assets/dfe9eded-4ec3-4245-9b7d-51500244bad2" align="right" height="77">
+<a href=""><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
 Um ponto crucial nessa integração, é o **POS - Point of Sale (PDV - Ponto de Venda)** é um sistema utilizado por empresas para processar vendas e transações com clientes. Ele combina hardware e software para ajudar a gerenciar diversas operações no ponto de venda, como registrar compras, processar pagamentos (cartão de crédito, débito, dinheiro, e pagamentos móveis), emitir recibos e monitorar o estoque. 
 
@@ -30,13 +30,13 @@ Além de transações financeiras, um sistema POS pode integrar funções adicio
 
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
 
-A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. 
-
-Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
+A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
 
 A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma representação física de uma NFe, também conhecida como **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica). A NFe é um documento digital que registra a transação comercial, mas, para facilitar o transporte e conferência da mercadoria, a legislação exige o DANFE, que é uma versão simplificada e impressa da NFe.
 
 Aqui estão os principais aspectos da impressão de NFe:
+
+<img src="https://github.com/user-attachments/assets/e1d96dba-596a-489b-b9a3-e4b58ad135a1" align="right" height="177">
 
 1. **DANFE (Documento Auxiliar da NFe)**: O DANFE é um documento que acompanha a mercadoria durante o transporte, permitindo que a fiscalização consulte a NFe registrada eletronicamente. Inclui informações essenciais sobre a transação, como número da NFe, chave de acesso (um código único para consulta online), descrição dos produtos, valores e impostos. A impressão é geralmente em papel A4 ou em formatos menores, e é obrigatória para o transporte de mercadorias.
 
