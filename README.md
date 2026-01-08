@@ -1131,7 +1131,7 @@ Principais desvantagens da solução TEF:
 
 2. Maior custo em equipamentos de hardware.
 
-<a href="https://tefdoc.stone.com.br/docs/getting-started"><img src="" align="right" height="177"></a>
+<a href="https://tefdoc.stone.com.br/docs/getting-started"><img src="https://github.com/user-attachments/assets/9197b041-baeb-43d0-a213-1b60548b01ec" align="right" height="177"></a>
 
 O **AutoTEF** é um SDK .Net que permite realizar pagamentos (Débito, Crédito, Voucher) do tipo TEF no Autorizador Stone, por se tratar de um produto backend é preciso que o Parceiro desenvolva um Frontend para se integrar ao SDK. Por ser construído em .Net é nativo em Windows. Através do AutoTef, você pode fazer todas as operações de pagamento:
 
