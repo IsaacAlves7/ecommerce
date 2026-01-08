@@ -39,8 +39,6 @@ A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma rep
 
 Aqui estão os principais aspectos da impressão de NFe:
 
-<img src="https://github.com/user-attachments/assets/e1d96dba-596a-489b-b9a3-e4b58ad135a1" align="right" height="177">
-
 1. **DANFE (Documento Auxiliar da NFe)**: O DANFE é um documento que acompanha a mercadoria durante o transporte, permitindo que a fiscalização consulte a NFe registrada eletronicamente. Inclui informações essenciais sobre a transação, como número da NFe, chave de acesso (um código único para consulta online), descrição dos produtos, valores e impostos. A impressão é geralmente em papel A4 ou em formatos menores, e é obrigatória para o transporte de mercadorias.
 
 1. **Chave de Acesso e Código de Barras**: O DANFE inclui a **chave de acesso**, que é um código numérico que permite consultar a NFe na Secretaria da Fazenda (SEFAZ) pela internet.
