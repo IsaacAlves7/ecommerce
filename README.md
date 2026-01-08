@@ -617,6 +617,8 @@ A principal diferença entre um gateway de pagamento e plataformas de pagamento 
 
 Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a plataforma é um sistema mais completo que ajuda a gerenciar as transações. Algumas empresas oferecem apenas gateways, enquanto outras têm plataformas que incluem gateways como parte de um serviço mais amplo.
 
+<img width="1024" height="387" alt="infografico-como-gateway-de-pagamento-funciona" src="https://github.com/user-attachments/assets/3ba64e6e-eb07-4305-98fa-87aaacc24258" />
+
 > [!Important]
 > A escolha entre um gateway de pagamento e uma plataforma de pagamento online (ou intermediadora de pagamentos) depende do modelo de negócio, volume de transações e do nível de controle que você deseja. Mas se a pergunta é qual oferece mais lucro, a resposta é: Para negócios com grande volume e estrutura própria, o gateway de pagamento costuma gerar mais lucro líquido a longo prazo, porque as taxas são menores e você tem mais controle sobre a operação.
 
