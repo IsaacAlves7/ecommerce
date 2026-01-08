@@ -125,6 +125,8 @@ Para integrar com sucesso um PinPad ao NetSuite, você precisará garantir a com
 
 Temos muitas soluções de pagamentos automatizados para a emição de comprovantes. Basta optar a que melhor se adequa no seu projeto.
 
+<img width="1100" height="620" alt="pos-(1)" src="https://github.com/user-attachments/assets/b456734c-2f0a-4a57-9bf6-e1644c76d4c2" />
+
 # 🏦 Banco
 No ecossistema de pagamentos com cartão, o **banco emissor** e o **banco adquirente** são dois pilares fundamentais que atuam em lados opostos da transação, cada um com um papel distinto e essencial para que uma compra seja autorizada e concluída com sucesso. Sua relação é uma dança coreografada que acontece em segundos.
 
