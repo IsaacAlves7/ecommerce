@@ -1116,7 +1116,7 @@ A TEF é geralmente utilizada em redes de lojas como supermercados ou estabeleci
 
 Principais vantagens da solução TEF:
 
-<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
+<a href="https://blog.vindi.com.br/tef/"><img width="726" height="249" alt="a09e3a6-image" src="https://github.com/user-attachments/assets/4f0e4d37-868f-4790-9e1c-d749c8b3bf42"></a><br>
 
 1. Por ser um produto multiadquirente, permite que um mesmo ponto de venda possa ser configurado para uso de várias adquirentes (Stone, Cielo, GetNet, etc), preservando as particularidades do serviço de cada uma delas.
  
@@ -1158,6 +1158,8 @@ O **AutoTEF** é um SDK .Net que permite realizar pagamentos (Débito, Crédito,
 - Controle do Terminal PINPad
 
 Para se integrar com a SDK da Stone, você precisa passar por três etapas:
+
+<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
 1. Integração: Nessa fase ainda não é necessário ser cliente cadastrado para enviar requisições. Possuímos um ambiente de sandbox (testes), onde é possível testar todas as situações que ocorrem em produção, como transações negadas e timeout. Para receber uma credencial de integração é necessário se cadastrar no nosso programa de parcerias. Cadastre-se aqui.
 
