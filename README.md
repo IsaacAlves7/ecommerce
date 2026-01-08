@@ -1,7 +1,7 @@
 # 🛒 Ecommerce
 <img src="https://img.shields.io/badge/Mercado_Pago-NPM-00ACCC?style=flat&logo=Mercado-Pago&logoColor=white"> <img src="https://img.shields.io/badge/Nubank-NPM-512BD4?style=flat&logo=Nubank&logoColor=white"> <img src="https://img.shields.io/badge/Bitcoin-NPM-gold?style=flat&logo=Bitcoin&logoColor=white"> <img src="https://img.shields.io/badge/Solidity-NPM-00ADD8?style=flat&logo=Solidity&logoColor=white"> <img src="https://img.shields.io/badge/PicPay-NPM-512BD4?style=flat&logo=PicPay&logoColor=white"> <img src="https://img.shields.io/badge/Mastercard-NPM-orange?style=flat&logo=Mastercard&logoColor=white"> <img src="https://img.shields.io/badge/PIX-NPM-cyan?style=flat&logo=Pix&logoColor=white">
 
-<a href="https://github.com/IsaacAlves7/ecommerce"><img src="https://github.com/user-attachments/assets/3c14547f-8845-45cc-96f9-c566387ecc06" align="right" height="177"></a>
+<a href="https://github.com/IsaacAlves7/ecommerce"><img src="https://em-content.zobj.net/source/microsoft-teams/400/shopping-cart_1f6d2.png" align="right" height="77"></a>
 
 Esse repositório é focado em soluções de projetos financeiros, de integrações com plataformas de pagamento e emissão de notas, e transações bancárias via APIs ou SDKs, para comércios eletrônicos (Ecommerces e Ebusiness) ou payments através de POS - Ponto de Venda.
 
