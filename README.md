@@ -652,7 +652,7 @@ O PayPal é popular devido às suas vantagens, incluindo:
 
 O **Stripe** é uma plataforma de pagamento online que permite que empresas aceitem pagamentos por meio de cartões de crédito, débito e outras formas de pagamento digital. O Stripe é uma plataforma de pagamento online líder que oferece soluções seguras e flexíveis para empresas que desejam aceitar pagamentos online.
 
-O Stripe oferece várias funcionalidades, incluindo:
+O <a href="https://cachecowboy.medium.com/how-stripes-backend-handles-billions-in-payments-every-day-3c1c2003a6a8">Stripe</a> oferece várias funcionalidades, incluindo:
 
 1. Processamento de pagamentos: O Stripe permite que empresas processem pagamentos online de forma segura e eficiente.
 2. Integração com plataformas: O Stripe pode ser integrado a plataformas de e-commerce, como Shopify, WooCommerce e Magento.
