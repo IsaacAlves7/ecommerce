@@ -21,8 +21,11 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 
 ![0_XKum7hiIAFYp7kj2](https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e)
 
-> [!Tip]
+> [!Important]
 > É importantíssimo que nesse cenário de System Design seja aplicado com boas técnicas de Design Patterns, Arquiteturas de Software, DDD + TDD + BDD, assim como microsserviços.
+
+> [!Tip]
+> Uma dica que vale a pena ser citada, é que cada negócio funciona de um forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
 
 # 💰 POS - Point of Sale
 <a href=""><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
