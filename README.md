@@ -168,6 +168,15 @@ Em resumo, a diferença central é:
 
 Essa divisão de funções cria um sistema seguro, eficiente e universal, onde o comerciante não precisa ter relacionamento com milhares de bancos diferentes, e o consumidor pode usar seu cartão em milhões de estabelecimentos ao redor do mundo.
 
+## [Bank] BTG Pactual
+**BTG Pactual** é um *banco de investimentos brasileiro* e uma das maiores instituições financeiras da América Latina. Ele atua oferecendo uma gama ampla de **serviços financeiros** para empresas, investidores institucionais, governos e pessoas de alta renda, incluindo *assessoria em fusões e aquisições, captação de recursos no mercado financeiro, gestão de ativos (asset management), gestão de patrimônio (wealth management), crédito corporativo e operações de negociação e trading*. 
+
+Fundado em 1983 no Brasil, o BTG Pactual se consolidou como **o maior banco de investimentos independente da América Latina** e tem presença em vários países, com escritórios em centros financeiros globais como São Paulo, Nova Iorque e Londres. 
+
+Além de atender grandes corporações e investidores institucionais, o banco também opera plataformas digitais de investimento para clientes. É conhecido por sua cultura de parceria entre sócios e por ser um player ativo tanto no mercado financeiro tradicional quanto em investimentos mais modernos e diversificados.
+
+Em resumo, o BTG Pactual não é um banco comum de varejo como aqueles que você usa no dia a dia para conta corrente, mas **um banco de investimento global** focado em serviços financeiros complexos, gestão de investimentos e soluções de capital para grandes clientes.
+
 # 💳 Rede de cartões
 <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a>
 
