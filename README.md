@@ -168,7 +168,47 @@ Em resumo, a diferença central é:
 
 Essa divisão de funções cria um sistema seguro, eficiente e universal, onde o comerciante não precisa ter relacionamento com milhares de bancos diferentes, e o consumidor pode usar seu cartão em milhões de estabelecimentos ao redor do mundo.
 
-## Serasa Experian
+# 💳 Rede de cartões
+<a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a>
+
+Uma **rede de cartões** é uma infraestrutura que conecta emissores de cartões (bancos e instituições financeiras) aos adquirentes (empresas que processam pagamentos para comerciantes). Ela facilita transações com cartões de crédito e débito, garantindo que os pagamentos sejam autorizados e processados corretamente.
+
+As principais redes de cartões incluem Visa, Mastercard, American Express e Discover, que operam globalmente. No Brasil, redes como Elo e Hipercard também são bastante utilizadas. Essas redes desempenham um papel essencial no sistema de pagamentos, definindo regras para transações, taxas e segurança. 
+
+A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
+
+As “bandeiras de cartão” e as “redes de pagamento” muitas vezes se referem às mesmas entidades, mas tecnicamente têm funções específicas dentro do ecossistema de pagamentos. Quando falamos de bandeiras como Visa, Mastercard, American Express, Discover, Elo, Hipercard e Diners Club, estamos nos referindo aos sistemas que licenciam o uso da sua marca em cartões emitidos por bancos e que também gerenciam as regras e a comunicação das transações entre o emissor (banco do cliente) e o adquirente (banco do lojista).
+
+No modelo mais comum — o chamado quatro partes — temos: cliente, lojista, emissor (banco do cliente), adquirente (banco do lojista), e a bandeira como intermediária entre emissor e adquirente. American Express e Diners, em alguns contextos, atuam também como emissores diretos, ou seja, integram todas essas partes (modelo de três partes). As bandeiras definem padrões técnicos, regras de segurança (como o uso do EMV, tokenização, 3DS), taxas (interchange, MDR), além de arbitrar disputas e cuidar da liquidação das transações.
+
+No Brasil, além de Visa e Mastercard, Elo (criada por BB, Bradesco e Caixa), Hipercard (do Itaú) e Cabal também compõem o ecossistema, cada uma com aceitação e políticas próprias. A distinção correta ajuda principalmente quem trabalha com meios de pagamento, fintechs ou integração com TEF e POS, já que entender a cadeia (bandeira, adquirente, subadquirente, gateway) é essencial para oferecer soluções robustas e compatíveis com o mercado nacional e internacional.
+
+Como funcionam as disputas e o estorno da Visa? Uma disputa acontece quando o titular do cartão discorda da cobrança de um comerciante. Um estorno é um processo de reversão da cobrança. Às vezes, os dois termos são usados de forma intercambiável.
+
+Uma disputa é cara: para cada dólar em transações contestadas, um adicional de US$ 1,50 é gasto em taxas e despesas.
+
+<img width="982" height="1111" alt="image" src="https://github.com/user-attachments/assets/60dea8fc-418c-47c9-8e9d-c7dfc89a47b9" />
+
+Passos 1-3: O titular do cartão, Bob, levanta uma disputa com o emissor do cartão. O banco emissor analisa os detalhes. Em casos de disputas legítimas, o banco emissor envia uma solicitação de estorno à rede de cartões.
+
+Etapas 4-6: A rede de cartões envia a disputa ao banco adquirente. Depois de revisar os detalhes, o banco adquirente pode pedir ao comerciante para resolver o problema.
+
+Passos 7,8: O comerciante tem duas opções:
+
+1. Os comerciantes podem aceitar estornos se parecerem legítimos.
+algarismo. O comerciante pode representar ao emissor o documento que suporta a transação.
+
+Etapas 9-11: O banco adquirente analisa as evidências e representa a transação para a rede de cartões, que a encaminha ao emissor.
+
+Etapas 12-14: O emissor analisa a representação. Existem duas opções:
+1. O emissor cobra a transação de volta ao titular do cartão;
+2. O emissor submete a disputa à rede de cartões para arbitragem.
+
+Passo 15: A rede de cartões decide com base nas evidências e atribui a responsabilidade final ao titular do cartão ou ao comerciante.
+
+👉 Para você: a disputa é cara. Como podemos reduzi-lo e tornar o processo mais simplificado?
+
+## [Card] Serasa Experian
 <img src="https://github.com/user-attachments/assets/bc068b24-dc5e-47d1-864c-ff2c14a62e7b" align="right" height="77">
 
 A **Serasa Experian** é uma empresa de análise de dados e informações de crédito, amplamente conhecida no Brasil por fornecer soluções para avaliação de risco de crédito, prevenção de fraudes e proteção ao consumidor e empresas. Fundada em 1968, a Serasa é uma das principais referências em informações de crédito no Brasil e, em 2007, foi adquirida pela multinacional **Experian**, uma empresa global de análise de informações e dados de crédito com sede no Reino Unido. Com essa união, a Serasa Experian passou a integrar soluções globais de análise de crédito com foco na realidade brasileira.
@@ -244,46 +284,6 @@ Essas APIs são utilizadas por uma ampla gama de setores, incluindo:
 - **Empresas de cobrança**: Para automatizar processos de cobrança e recuperação de crédito.
 
 Essas integrações ajudam as empresas a automatizar processos críticos, reduzir riscos financeiros e melhorar a experiência do cliente.
-
-# 💳 Rede de cartões
-<a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a>
-
-Uma **rede de cartões** é uma infraestrutura que conecta emissores de cartões (bancos e instituições financeiras) aos adquirentes (empresas que processam pagamentos para comerciantes). Ela facilita transações com cartões de crédito e débito, garantindo que os pagamentos sejam autorizados e processados corretamente.
-
-As principais redes de cartões incluem Visa, Mastercard, American Express e Discover, que operam globalmente. No Brasil, redes como Elo e Hipercard também são bastante utilizadas. Essas redes desempenham um papel essencial no sistema de pagamentos, definindo regras para transações, taxas e segurança. 
-
-A **bandeira** (brand) identifica a rede à qual o cartão está associado, como **VISA**, **Mastercard**, **American Express**, entre outras. As bandeiras representam as empresas responsáveis pelo processamento das transações, pela definição das taxas, e pela padronização de aceitação dos cartões nos estabelecimentos comerciais. Portanto, o campo `"brand": "VISA"` refere-se à bandeira do cartão de crédito. 
-
-As “bandeiras de cartão” e as “redes de pagamento” muitas vezes se referem às mesmas entidades, mas tecnicamente têm funções específicas dentro do ecossistema de pagamentos. Quando falamos de bandeiras como Visa, Mastercard, American Express, Discover, Elo, Hipercard e Diners Club, estamos nos referindo aos sistemas que licenciam o uso da sua marca em cartões emitidos por bancos e que também gerenciam as regras e a comunicação das transações entre o emissor (banco do cliente) e o adquirente (banco do lojista).
-
-No modelo mais comum — o chamado quatro partes — temos: cliente, lojista, emissor (banco do cliente), adquirente (banco do lojista), e a bandeira como intermediária entre emissor e adquirente. American Express e Diners, em alguns contextos, atuam também como emissores diretos, ou seja, integram todas essas partes (modelo de três partes). As bandeiras definem padrões técnicos, regras de segurança (como o uso do EMV, tokenização, 3DS), taxas (interchange, MDR), além de arbitrar disputas e cuidar da liquidação das transações.
-
-No Brasil, além de Visa e Mastercard, Elo (criada por BB, Bradesco e Caixa), Hipercard (do Itaú) e Cabal também compõem o ecossistema, cada uma com aceitação e políticas próprias. A distinção correta ajuda principalmente quem trabalha com meios de pagamento, fintechs ou integração com TEF e POS, já que entender a cadeia (bandeira, adquirente, subadquirente, gateway) é essencial para oferecer soluções robustas e compatíveis com o mercado nacional e internacional.
-
-Como funcionam as disputas e o estorno da Visa? Uma disputa acontece quando o titular do cartão discorda da cobrança de um comerciante. Um estorno é um processo de reversão da cobrança. Às vezes, os dois termos são usados de forma intercambiável.
-
-Uma disputa é cara: para cada dólar em transações contestadas, um adicional de US$ 1,50 é gasto em taxas e despesas.
-
-<img width="982" height="1111" alt="image" src="https://github.com/user-attachments/assets/60dea8fc-418c-47c9-8e9d-c7dfc89a47b9" />
-
-Passos 1-3: O titular do cartão, Bob, levanta uma disputa com o emissor do cartão. O banco emissor analisa os detalhes. Em casos de disputas legítimas, o banco emissor envia uma solicitação de estorno à rede de cartões.
-
-Etapas 4-6: A rede de cartões envia a disputa ao banco adquirente. Depois de revisar os detalhes, o banco adquirente pode pedir ao comerciante para resolver o problema.
-
-Passos 7,8: O comerciante tem duas opções:
-
-1. Os comerciantes podem aceitar estornos se parecerem legítimos.
-algarismo. O comerciante pode representar ao emissor o documento que suporta a transação.
-
-Etapas 9-11: O banco adquirente analisa as evidências e representa a transação para a rede de cartões, que a encaminha ao emissor.
-
-Etapas 12-14: O emissor analisa a representação. Existem duas opções:
-1. O emissor cobra a transação de volta ao titular do cartão;
-2. O emissor submete a disputa à rede de cartões para arbitragem.
-
-Passo 15: A rede de cartões decide com base nas evidências e atribui a responsabilidade final ao titular do cartão ou ao comerciante.
-
-👉 Para você: a disputa é cara. Como podemos reduzi-lo e tornar o processo mais simplificado?
 
 ## [Card] BNPL (Buy Now, Pay Later)
 <a href="https://www.serasaexperian.com.br/conteudos/bnpl-como-funciona-caas-compras-digitais/"><img src="https://em-content.zobj.net/source/microsoft-teams/400/dollar-banknote_1f4b5.png" align="right" height="77"></a>
