@@ -245,39 +245,6 @@ Essas APIs são utilizadas por uma ampla gama de setores, incluindo:
 
 Essas integrações ajudam as empresas a automatizar processos críticos, reduzir riscos financeiros e melhorar a experiência do cliente.
 
-# 💵 BNPL (Buy Now, Pay Later)
-O **BNPL - Buy Now, Pay Later** (Compre Agora, Pague Depois), é um modelo de crédito instantâneo que tem ganhado enorme relevância no ecossistema financeiro digital por permitir que o consumidor realize uma compra e pague em parcelas ou em uma data futura, sem necessariamente utilizar um cartão de crédito tradicional. Trata-se de uma evolução dos sistemas de parcelamento, mas com a diferença de estar totalmente integrada à experiência de compra, tanto online quanto física. Ou seja, o cliente escolhe o produto, finaliza a compra e, no momento do checkout, recebe a opção de pagar depois — muitas vezes sem juros ou com taxas menores que as de cartões.
-
-A operação do BNPL ocorre da seguinte forma: uma fintech ou instituição financeira atua como intermediária entre o consumidor e o lojista. Assim que o cliente opta por pagar depois, a empresa de BNPL paga o valor integral ao comerciante, garantindo que ele receba à vista, e o consumidor passa a dever à fintech, que define o cronograma de pagamentos. Isso traz benefícios para ambos os lados — o comerciante não assume risco de inadimplência e ainda aumenta a taxa de conversão de vendas, e o consumidor ganha flexibilidade de pagamento, podendo adquirir bens de maior valor sem precisar de um limite alto de crédito.
-
-O modelo BNPL se consolidou como parte do movimento das chamadas *embedded finances* — ou “finanças embutidas” —, que têm como objetivo integrar serviços financeiros diretamente ao ponto de consumo. Plataformas como Klarna, Afterpay, Affirm e Mercado Crédito são exemplos populares, oferecendo esse tipo de pagamento em marketplaces, e-commerces e até lojas físicas, geralmente dentro de sistemas POS (Point of Sale). Na prática, o BNPL combina aspectos de crédito, tecnologia e experiência do usuário em um formato de microfinanciamento instantâneo, sem as burocracias tradicionais de aprovação de crédito bancário.
-
-Contudo, o crescimento do BNPL também traz desafios e discussões regulatórias, especialmente quanto à responsabilidade do consumidor e ao controle de endividamento. Muitos usuários acabam contratando várias compras parceladas em diferentes plataformas, sem uma visão consolidada da dívida total. Por isso, órgãos reguladores e bancos centrais de vários países estão avaliando políticas para equilibrar a inovação com a proteção financeira do consumidor.
-
-Em síntese, o BNPL é mais do que uma forma de pagamento — é uma transformação na forma como o crédito é oferecido e consumido. Ele reflete a tendência global de tornar o ato de pagar algo quase invisível, integrado ao fluxo da experiência de compra, e adaptado ao comportamento digital e instantâneo do consumidor moderno.
-
-O crescimento do BNPL tem sido dramático nos últimos anos. O provedor BNPL representa a interface principal entre os comerciantes e os clientes para comércio eletrônico e POS (ponto de venda).
-
-O diagrama abaixo mostra como o processo funciona:
-
-<img width="901" height="984" alt="image" src="https://github.com/user-attachments/assets/7073d0e9-2c95-4643-b783-91aa0a9157a5" />
-
-**POS (Point of Sale)** significa **Ponto de Venda** — é o sistema (hardware + software) utilizado para **processar transações comerciais** em tempo real, geralmente no varejo físico ou digital. Ele engloba os terminais de pagamento, maquininhas de cartão, caixas registradoras digitais e softwares que registram as vendas, emitem recibos e integram estoque e faturamento. Quando você paga com cartão numa loja, o POS é o sistema que processa o pagamento, conecta-se à adquirente, valida o cartão, aprova a transação e emite o comprovante. Ou seja, o POS é a **infraestrutura de pagamento no ponto de compra**.
-
-Já o **BNPL (Buy Now, Pay Later)** significa **Compre Agora, Pague Depois** — é uma **modalidade de crédito instantâneo**, normalmente integrada ao checkout online (mas cada vez mais disponível também em POS físicos), que permite ao consumidor dividir ou postergar o pagamento de uma compra sem necessariamente usar um cartão de crédito. Na prática, o BNPL é um **modelo de financiamento embutido no momento da compra**: a fintech ou o banco paga o lojista à vista, e o consumidor paga depois em parcelas, com ou sem juros, dependendo do acordo. Exemplos disso são empresas como **Klarna, Afterpay, Affirm e Mercado Crédito**, além de soluções oferecidas por bancos digitais.
-
-Em resumo:
-
-* **POS** → é a **plataforma de transação** (onde o pagamento acontece).
-* **BNPL** → é a **solução de crédito embutida** no pagamento (como o pagamento será feito).
-
-Os dois se conectam: o BNPL muitas vezes é integrado **ao POS**, tanto físico quanto digital, permitindo que o consumidor escolha “pagar depois” diretamente na maquininha ou no checkout online.
-
-Então, se quisermos sintetizar de forma prática:
-
-* O **POS** é o **meio** de pagamento.
-* O **BNPL** é o **modelo financeiro** de pagamento.
-
 # 💳 Rede de cartões
 <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a> <a href="https://youtu.be/EyMRZpgJUuc"><img src="https://img.shields.io/badge/VISA-23-00599C?style=flat&logo=VISA&logoColor=white"></a>
 
@@ -317,6 +284,41 @@ Etapas 12-14: O emissor analisa a representação. Existem duas opções:
 Passo 15: A rede de cartões decide com base nas evidências e atribui a responsabilidade final ao titular do cartão ou ao comerciante.
 
 👉 Para você: a disputa é cara. Como podemos reduzi-lo e tornar o processo mais simplificado?
+
+## [Card] BNPL (Buy Now, Pay Later)
+<a href="https://www.serasaexperian.com.br/conteudos/bnpl-como-funciona-caas-compras-digitais/"><img src="https://em-content.zobj.net/source/microsoft-teams/400/dollar-banknote_1f4b5.png" align="right" height="77"></a>
+
+O **BNPL - Buy Now, Pay Later** (Compre Agora, Pague Depois), é um modelo de crédito instantâneo que tem ganhado enorme relevância no ecossistema financeiro digital por permitir que o consumidor realize uma compra e pague em parcelas ou em uma data futura, sem necessariamente utilizar um cartão de crédito tradicional. Trata-se de uma evolução dos sistemas de parcelamento, mas com a diferença de estar totalmente integrada à experiência de compra, tanto online quanto física. Ou seja, o cliente escolhe o produto, finaliza a compra e, no momento do checkout, recebe a opção de pagar depois — muitas vezes sem juros ou com taxas menores que as de cartões.
+
+A operação do BNPL ocorre da seguinte forma: uma fintech ou instituição financeira atua como intermediária entre o consumidor e o lojista. Assim que o cliente opta por pagar depois, a empresa de BNPL paga o valor integral ao comerciante, garantindo que ele receba à vista, e o consumidor passa a dever à fintech, que define o cronograma de pagamentos. Isso traz benefícios para ambos os lados — o comerciante não assume risco de inadimplência e ainda aumenta a taxa de conversão de vendas, e o consumidor ganha flexibilidade de pagamento, podendo adquirir bens de maior valor sem precisar de um limite alto de crédito.
+
+O modelo BNPL se consolidou como parte do movimento das chamadas *embedded finances* — ou “finanças embutidas” —, que têm como objetivo integrar serviços financeiros diretamente ao ponto de consumo. Plataformas como Klarna, Afterpay, Affirm e Mercado Crédito são exemplos populares, oferecendo esse tipo de pagamento em marketplaces, e-commerces e até lojas físicas, geralmente dentro de sistemas POS (Point of Sale). Na prática, o BNPL combina aspectos de crédito, tecnologia e experiência do usuário em um formato de microfinanciamento instantâneo, sem as burocracias tradicionais de aprovação de crédito bancário.
+
+Contudo, o crescimento do BNPL também traz desafios e discussões regulatórias, especialmente quanto à responsabilidade do consumidor e ao controle de endividamento. Muitos usuários acabam contratando várias compras parceladas em diferentes plataformas, sem uma visão consolidada da dívida total. Por isso, órgãos reguladores e bancos centrais de vários países estão avaliando políticas para equilibrar a inovação com a proteção financeira do consumidor.
+
+Em síntese, o BNPL é mais do que uma forma de pagamento — é uma transformação na forma como o crédito é oferecido e consumido. Ele reflete a tendência global de tornar o ato de pagar algo quase invisível, integrado ao fluxo da experiência de compra, e adaptado ao comportamento digital e instantâneo do consumidor moderno.
+
+O crescimento do BNPL tem sido dramático nos últimos anos. O provedor BNPL representa a interface principal entre os comerciantes e os clientes para comércio eletrônico e POS (ponto de venda).
+
+O diagrama abaixo mostra como o processo funciona:
+
+<img width="901" height="984" alt="image" src="" />
+
+**POS (Point of Sale)** significa **Ponto de Venda** — é o sistema (hardware + software) utilizado para **processar transações comerciais** em tempo real, geralmente no varejo físico ou digital. Ele engloba os terminais de pagamento, maquininhas de cartão, caixas registradoras digitais e softwares que registram as vendas, emitem recibos e integram estoque e faturamento. Quando você paga com cartão numa loja, o POS é o sistema que processa o pagamento, conecta-se à adquirente, valida o cartão, aprova a transação e emite o comprovante. Ou seja, o POS é a **infraestrutura de pagamento no ponto de compra**.
+
+Já o **BNPL (Buy Now, Pay Later)** significa **Compre Agora, Pague Depois** — é uma **modalidade de crédito instantâneo**, normalmente integrada ao checkout online (mas cada vez mais disponível também em POS físicos), que permite ao consumidor dividir ou postergar o pagamento de uma compra sem necessariamente usar um cartão de crédito. Na prática, o BNPL é um **modelo de financiamento embutido no momento da compra**: a fintech ou o banco paga o lojista à vista, e o consumidor paga depois em parcelas, com ou sem juros, dependendo do acordo. Exemplos disso são empresas como **Klarna, Afterpay, Affirm e Mercado Crédito**, além de soluções oferecidas por bancos digitais.
+
+Em resumo:
+
+* **POS** → é a **plataforma de transação** (onde o pagamento acontece).
+* **BNPL** → é a **solução de crédito embutida** no pagamento (como o pagamento será feito).
+
+Os dois se conectam: o BNPL muitas vezes é integrado **ao POS**, tanto físico quanto digital, permitindo que o consumidor escolha “pagar depois” diretamente na maquininha ou no checkout online.
+
+Então, se quisermos sintetizar de forma prática:
+
+* O **POS** é o **meio** de pagamento.
+* O **BNPL** é o **modelo financeiro** de pagamento.
 
 ## [Card] Como a AMEX processa milhões de transações diárias com latência de milissegundos
 Veremos as decisões de arquitetura e design que os engenheiros da AMEX tomaram ao construir o novo sistema de pagamento.
