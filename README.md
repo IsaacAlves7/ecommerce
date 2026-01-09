@@ -1113,9 +1113,10 @@ Por meio da integração com Connect 2.0, conseguimos:
 Hoje, o Connect Stone suporta os seguintes modelos de terminais:
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/aaf78ab8-96b6-4bcf-8a4d-ff023a919280" height="377">
+  <img height="393" alt="a4cb400f8dbc59b578fca17be2bad712b3bf018f53cc49705014a2c198af027a-TerminaisConnect" src="https://github.com/user-attachments/assets/86bf2690-da8b-4572-89be-e4e37e3c0ac0" />
+<!-- <img src="https://github.com/user-attachments/assets/aaf78ab8-96b6-4bcf-8a4d-ff023a919280" height="377">
 
-<!-- <sub><b>A8, P2 e L3</b> (Recomendado por melhor performance com o produto integrado)</sub> -->
+<sub><b>A8, P2 e L3</b> (Recomendado por melhor performance com o produto integrado)</sub> -->
 </div>
 
 A operação é feita através da:
