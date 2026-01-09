@@ -663,12 +663,12 @@ define(['N/https', 'N/record'], function(https, record) {
 
 8. Suporte ao cliente e solução de problemas, mantenha contato com seu provedor de gateway de pagamento para solução de problemas ou atualizações sobre alterações de API. Verifique regularmente se há atualizações no firmware do PinPad ou no SuiteApp de integração de pagamento do NetSuite. Conclusão para integrar com sucesso um PinPad ao NetSuite, você precisará garantir a compatibilidade entre o seu PinPad, gateway de pagamento e o sistema de pagamento do NetSuite. Se não existir um SuiteApp pré-construído, pode ser necessário usar as APIs do SuiteScript e do NetSuite para criar soluções personalizadas. Certifique-se sempre de que sua integração seja segura e compatível com os padrões de processamento de pagamentos.
 
-# 🤝 Gateway de pagamento
+# 🤝 Payment Gateway
 <img src="https://img.shields.io/badge/Mercado_Pago-NPM-00ACCC?style=flat&logo=Mercado-Pago&logoColor=white"> <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a> <img src="https://img.shields.io/badge/Mercado_Pago-NPM-00ACCC?style=flat&logo=Mercado-Pago&logoColor=white"> <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
 
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/handshake_1f91d.png" align="right" height="77">
 
-Um **gateway de pagamento** é uma tecnologia que permite que empresas aceitem pagamentos online por meio de cartões de crédito, débito e outras formas de pagamento eletrônico. Ele atua como uma ponte entre o site ou aplicativo de uma empresa e as instituições financeiras que processam os pagamentos. Em resumo, um gateway de pagamento é uma tecnologia que permite que empresas aceitem pagamentos online, enquanto plataformas de pagamento eletrônico são empresas que oferecem soluções de pagamento completo. 
+Um **gateway de pagamento** (Payment Gateway) é uma tecnologia que permite que empresas aceitem pagamentos online por meio de cartões de crédito, débito e outras formas de pagamento eletrônico. Ele atua como uma ponte entre o site ou aplicativo de uma empresa e as instituições financeiras que processam os pagamentos. Em resumo, um gateway de pagamento é uma tecnologia que permite que empresas aceitem pagamentos online, enquanto plataformas de pagamento eletrônico são empresas que oferecem soluções de pagamento completo. 
 
 Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pagamento e plataforma de pagamento eletrônico, proporcionando uma solução completa para negócios online. Veja abaixo:
 
@@ -725,7 +725,7 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
 ## [Gateway] Plataformas de pagamento eletrônico
 <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
 
-<img src="https://github.com/user-attachments/assets/8a5ea030-ea28-4629-8f68-5aaf0a939c50" align="right" height="77">
+<a href="https://www.mercadopago.com.br/"><img src="https://github.com/user-attachments/assets/878ae7de-9799-4212-8955-0bc1d1206ee9" align="right" height="77"></a>
 
 O **Mercado Pago** é uma plataforma de pagamento online criada pelo Mercado Livre, uma das maiores plataformas de e-commerce da América Latina. O Mercado Pago permite que usuários façam pagamentos online, transfiram dinheiro e gerenciem suas finanças de forma segura e conveniente. O Mercado Pago é uma plataforma de pagamento online líder na América Latina que oferece soluções seguras e convenientes para usuários que desejam fazer pagamentos online e gerenciar suas finanças.
 
