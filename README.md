@@ -1194,7 +1194,14 @@ Fluxo da solução TEF: Software TEF + sistema embarcado (pinpad/PDV)
 
 <a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/72312afa-3031-449e-be05-0fc78965cdab"></a><br>
 
-A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** (hardware) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
+A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** é o equipamento (hardware) que faz a captura dos dados do cartão para realizar a transação (se parece muito com uma maquininha) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
+
+A Stone tem compatibilidade com os seguintes pinpads: 
+
+<div align="center"><img width="544" height="1046" alt="image" src="https://github.com/user-attachments/assets/9ecf2253-6028-4c3d-84a8-1c73f64ea929" /></div>
+
+> [!Note]
+> **Lembre-se**: Caso você já tenha um pinpad que não seja da Stone, é necessário ter a aplicação e chave Stone para realizar a transação. Se seu pinpad estiver apresentando problemas transacionais após mudar as bandeiras para a Stone, então será necessário adquirir um Pinpad Stone, pois seu equipamento pode não ter a chave necessária para efetuar transações por nós.
 
 Principais vantagens da solução TEF:
 
@@ -1303,6 +1310,71 @@ Para implantar a Stone em seu sistema de TEF, atente-se às etapas abaixo, pois 
 > - Docs: https://online.stone.com.br/docs/o-que-e-o-stone-online
 
 Outro ponto bastante importante é a **TEF House** (ou House de TEF) que é uma empresa especializada em fornecer soluções de *Transferência Eletrônica de Fundos (TEF)* no contexto de pagamentos eletrônicos. Essas empresas desenvolvem e oferecem sistemas que integram terminais de pagamento, como <a href="https://acessocredenciamento.blogspot.com/p/bandeiras_5667.html">máquinas de cartão</a>, aos sistemas de automação comercial de estabelecimentos, facilitando a comunicação entre bancos, operadoras de cartão e o sistema de vendas. A TEF House oferece diversos serviços, como autorização de pagamentos, segurança nas transações, e integração com múltiplas operadoras de cartão, além de garantir o compliance com as normas de segurança, como o PCI-DSS.
+
+É a empresa que desenvolve o sistema do TEF. Atualmente, temos parceria com as seguintes TEF Houses:
+
+<table style="width: 100%;"><tbody>
+<tr>
+<td style="width: 22.9381%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>TEF House</strong></span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Produto TEF</strong></span></div></td>
+<td style="width: 59.2784%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Contatos do Suporte</strong></span></div></td>
+</tr>
+<tr>
+<td style="width: 22.9381%; text-align: center;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">Software Express</span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">SITEF</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">suporte@softwareexpress.com.br &nbsp;</span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">atendimento.clientes@softwareexpress.com.br</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><p style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">SETIS Automação</span></p></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">PayGO</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="https://setis.com.br/homepage/contato/" id="" rel="noopener noreferrer" target="_blank" title="">https://setis.com.br/homepage/contato/</a></span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">(11) 5904-7500</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><p style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">NCR (antigo OKI)</span></p></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">Scope</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">faleconosco@okibrasil.com</span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">(11) 3506 - 9500</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">Linx Tecnologia</span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">D-TEF</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li dir="ltr" style="line-height: 1.8; margin-top: 0pt; margin-bottom: 0pt; text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="text-decoration: underline; font-size: 11pt; color: rgb(17, 85, 204); background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"><a href="https://www.linx.com.br/area-do-cliente-e-suporte/#!/linx-tef-support-data" title="" id="" target="_blank" rel="noopener noreferrer"></a></span><a href="https://www.linx.com.br/area-do-cliente-e-suporte/#!/linx-tef-support-data" id="" rel="noopener noreferrer" target="_blank" title=""></a><a href="https://www.linx.com.br/area-do-cliente-e-suporte/#!/linx-tef-support-data" id="" rel="noopener noreferrer" target="_blank" title="">Área do cliente</a>&nbsp;</span></li>
+<li dir="ltr" style="line-height: 1.8; margin-top: 0pt; margin-bottom: 0pt; text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">0800 729 3107</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">VBI Soluções</span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">V$-Pague</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="http://vspague.com.br/contato/" id="" rel="noopener noreferrer" target="_blank" title="">http://vspague.com.br/contato/</a></span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">+55 48 3462 - 7800</span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">+55 48 3437 - 3344</span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">+55 48 3045 - 6622</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">Auttar/GetNet</span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">CTF</span></div></td>
+<td style="width: 59.2784%;"><ul>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="https://www.auttar.com.br/fale-conosco/" id="" rel="noopener noreferrer" target="_blank" title="">https://www.auttar.com.br/fale-conosco/&nbsp;</a></span></li>
+<li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">&nbsp;4003 - 5251</span></li>
+</ul></td>
+</tr>
+<tr>
+<td style="width: 22.9381%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">Verti Tecnologia</span></div></td>
+<td style="width: 17.7835%;"><div style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;">VM-Pay</span></div></td>
+<td style="width: 59.2784%;"><ul><li style="text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;">&nbsp;(41) 3338-0044</span></li></ul></td>
+</tr>
+</tbody></table>
 
 <a href="https://www.linx.com.br/fisico/"><img src="https://github.com/user-attachments/assets/d610ea07-3a66-44ff-a9d3-c31efdd8f99b" align="right" height="77"></a>
 
