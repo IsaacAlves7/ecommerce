@@ -1192,7 +1192,7 @@ TEF é a sigla para Transferência Eletrônica de Fundos. Ele é um sistema que 
 
 Fluxo da solução TEF: Software TEF + sistema embarcado (pinpad/PDV)
 
-<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/72312afa-3031-449e-be05-0fc78965cdab"></a><br>
+<a href="https://tefdoc.stone.com.br/docs/getting-started"><img src="https://github.com/user-attachments/assets/72312afa-3031-449e-be05-0fc78965cdab"></a><br>
 
 A TEF é geralmente utilizada em redes de lojas como supermercados ou estabelecimentos com muitos caixas onde a rotatividade de consumidores é grande. Há uma confusão muito comum no mercado, pois a TEF não é um equipamento (hardware), sendo somente a transação, ou seja, é o sistema de pagamentos (software) que faz a comunicação de forma automática entre diversas adquirentes. O que ficou popularmente conhecido como TEF – na realidade – é um **PIN Pad** é o equipamento (hardware) que faz a captura dos dados do cartão para realizar a transação (se parece muito com uma maquininha) que está conectado a um computador através de um fio (cabo) e o sistema TEF está instalado nesse computador.
 
