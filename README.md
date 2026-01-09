@@ -1227,14 +1227,15 @@ Para implantar a Stone em seu sistema de TEF, atente-se às etapas abaixo, pois 
 
 9. Aplique a carga de tabelas e realize uma transação teste no débito e no crédito para avaliar se está tudo correto. 
 
-Qualquer dúvida relacionada ao SDK ou a PIN Pad, deve ser reportada ao time de suporte de desenvolvimento da Stone, aqui está alguns canais de suporte da provedora:
+> [!Note]
+> Qualquer dúvida relacionada ao SDK ou a PIN Pad, deve ser reportada ao time de suporte de desenvolvimento da Stone, aqui está alguns canais de suporte da provedora:
+>
+> - Stone: 3004-9681
+> - Email: parceiro@stone.com.br
+> - Site: https://partnerhub.stone.com.br/#/home
+> - Docs: https://online.stone.com.br/docs/o-que-e-o-stone-online
 
-- Stone: 3004-9681
-- Email: parceiro@stone.com.br
-- Site: https://partnerhub.stone.com.br/#/home
-- Docs: https://online.stone.com.br/docs/o-que-e-o-stone-online
-
-Outro ponto bastante importante é a **TEF House** (ou House de TEF) que é uma empresa especializada em fornecer soluções de *Transferência Eletrônica de Fundos* (TEF) no contexto de pagamentos eletrônicos. Essas empresas desenvolvem e oferecem sistemas que integram terminais de pagamento, como <a href="https://acessocredenciamento.blogspot.com/p/bandeiras_5667.html">máquinas de cartão</a>, aos sistemas de automação comercial de estabelecimentos, facilitando a comunicação entre bancos, operadoras de cartão e o sistema de vendas. A TEF House oferece diversos serviços, como autorização de pagamentos, segurança nas transações, e integração com múltiplas operadoras de cartão, além de garantir o compliance com as normas de segurança, como o PCI-DSS.
+Outro ponto bastante importante é a **TEF House** (ou House de TEF) que é uma empresa especializada em fornecer soluções de *Transferência Eletrônica de Fundos (TEF)* no contexto de pagamentos eletrônicos. Essas empresas desenvolvem e oferecem sistemas que integram terminais de pagamento, como <a href="https://acessocredenciamento.blogspot.com/p/bandeiras_5667.html">máquinas de cartão</a>, aos sistemas de automação comercial de estabelecimentos, facilitando a comunicação entre bancos, operadoras de cartão e o sistema de vendas. A TEF House oferece diversos serviços, como autorização de pagamentos, segurança nas transações, e integração com múltiplas operadoras de cartão, além de garantir o compliance com as normas de segurança, como o PCI-DSS.
 
 <a href="https://www.linx.com.br/fisico/"><img src="https://github.com/user-attachments/assets/d610ea07-3a66-44ff-a9d3-c31efdd8f99b" align="right" height="77"></a>
 
@@ -1265,6 +1266,16 @@ Para implementar a Linx TEF House, o varejista conecta o sistema de PDV à plata
 2. **Autorização**: A Linx TEF House roteia a transação para o adquirente apropriado.
 3. **Resposta**: O adquirente envia a resposta de aprovação ou rejeição da transação para a Linx TEF House, que encaminha ao PDV.
 4. **Finalização**: Se aprovada, a transação é concluída no PDV; caso contrário, é possível tentar novamente ou processar uma forma alternativa de pagamento.
+
+O pinpad em si é um sistema embarcado, mas a conexão entre o pinpad e o PDV não é considerada um sistema embarcado. Ela é apenas o **meio de comunicação** entre dois sistemas, cada um com seu papel bem definido.
+
+O **pinpad** é um sistema embarcado porque possui hardware dedicado, firmware próprio, sistema operacional embarcado (geralmente um RTOS ou Linux embarcado), memória, processador e software específico para executar uma função crítica: captura segura de dados do cartão, criptografia, interação com o usuário e comunicação com o TEF. Ele opera de forma autônoma dentro de limites muito bem controlados e certificados (PCI, por exemplo), o que é a essência de um sistema embarcado.
+
+O **PDV (software de caixa)**, por outro lado, não é um sistema embarcado. Ele é uma aplicação rodando sobre um sistema operacional de propósito geral (Windows, Linux, Android, etc.), com acesso a recursos amplos do sistema, banco de dados, rede, periféricos e integrações externas como ERP, CRM e APIs.
+
+Já a conexão entre pinpad e PDV seja USB, serial, Ethernet ou Bluetooth é apenas um **canal de comunicação** que implementa um **protocolo**, normalmente definido pelo fabricante do pinpad ou pela TEF House. Esse protocolo especifica mensagens, estados, timeouts e códigos de resposta, mas não caracteriza, por si só, um sistema embarcado. Ele não executa lógica própria nem toma decisões; apenas transporta dados e comandos.
+
+> Em resumo: o **sistema embarcado é o pinpad**; o **PDV é um software de aplicação**; e a **ligação entre eles é um protocolo de comunicação**, não um sistema embarcado. Essa separação é justamente o que permite manter o ambiente crítico (dados sensíveis do cartão) isolado no hardware certificado, enquanto o restante do fluxo fica no domínio do software comercial.
 
 Alguns dados importantes para inicializar o Linx TEF House:
 
