@@ -44,7 +44,7 @@ O sistema embarcado é o pinpad, o **PDV é um software de aplicação** e a lig
 
 Alguns tipos de PINPADs utilizadas em conjunto com o POS:
 
-![533507752-0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3](https://github.com/user-attachments/assets/149ff574-bf79-4d89-a0f7-c70df3fc767c)
+<a href="https://www.stone.com.br/maquina-de-cartao/"><img src="https://github.com/user-attachments/assets/149ff574-bf79-4d89-a0f7-c70df3fc767c"></a>
 
 O pinpad em si é um sistema embarcado, mas a conexão entre o pinpad e o PDV não é considerada um sistema embarcado. Ela é apenas o **meio de comunicação** entre dois sistemas, cada um com seu papel bem definido.
 
