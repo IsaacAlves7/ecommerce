@@ -1123,7 +1123,7 @@ Além da facilidade de <a href="https://youtu.be/n3I6lXQYufo">integração</a> d
 
 TEF é a sigla para Transferência Eletrônica de Fundos. Ele é um sistema que possibilita que vendas de crédito, débito ou voucher sejam realizadas de maneira mais eficiente. É importante saber que TEF é um serviço destinado para clientes pessoa jurídica (CNPJ) com vendas acima de R$ 40.000,00 por mês. Este valor pode ser de uma unidade ou a soma de algumas unidades do estabelecimento comercial (matriz + filiais). Se o seu negócio não possui CNPJ, portanto classificado como pessoa física (CPF) procure sobre os produtos POS ou TON.
 
-Fluxo da solução TEF:
+Fluxo da solução TEF: Software TEF + sistema embarcado (pinpad/PDV)
 
 <a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/72312afa-3031-449e-be05-0fc78965cdab"></a><br>
 
