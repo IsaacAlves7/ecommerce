@@ -42,7 +42,7 @@ Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-
 
 Alguns tipos de PINPADs utilizadas em conjunto com o POS:
 
-![modelos-maquininhas-stone-compativeis-1](https://github.com/user-attachments/assets/0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3)
+![533507752-0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3](https://github.com/user-attachments/assets/149ff574-bf79-4d89-a0f7-c70df3fc767c)
 
 A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma representação física de uma NFe, também conhecida como **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica). A NFe é um documento digital que registra a transação comercial, mas, para facilitar o transporte e conferência da mercadoria, a legislação exige o DANFE, que é uma versão simplificada e impressa da NFe.
 
