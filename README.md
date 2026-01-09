@@ -111,6 +111,8 @@ O pagamento, por sua vez, costuma seguir dois caminhos. Em muitos casos, o totem
 
 Portanto, diferente do pinpad isolado, o totem é um **orquestrador**. Ele coordena interface, regras de negócio, pagamentos, integrações e experiência do usuário. O protocolo dominante ali não é mais serial ou USB com mensagens binárias, mas sim **protocolos de aplicação de alto nível**, principalmente HTTP/HTTPS com JSON, autenticação, versionamento e observabilidade. A comunicação com hardware específico — leitor NFC, impressora térmica, pinpad — continua existindo, mas fica encapsulada em drivers, SDKs ou serviços locais.
 
+<img src="https://em-content.zobj.net/source/microsoft-teams/400/receipt_1f9fe.png" align="right" height="77">
+
 A **impressão de Nota Fiscal Eletrônica (NFe)** é o processo de gerar uma representação física de uma NFe, também conhecida como **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica). A NFe é um documento digital que registra a transação comercial, mas, para facilitar o transporte e conferência da mercadoria, a legislação exige o DANFE, que é uma versão simplificada e impressa da NFe.
 
 Aqui estão os principais aspectos da impressão de NFe:
