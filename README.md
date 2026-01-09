@@ -40,6 +40,8 @@ Então, o hardware de um POS geralmente inclui dispositivos como um terminal de 
 
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
 
+O sistema embarcado é o pinpad, o **PDV é um software de aplicação** e a ligação entre eles é um protocolo de comunicação, não um sistema embarcado. Essa separação é justamente o que permite manter o ambiente crítico (dados sensíveis do cartão) isolado no hardware certificado, enquanto o restante do fluxo fica no domínio do software comercial.
+
 Alguns tipos de PINPADs utilizadas em conjunto com o POS:
 
 ![533507752-0f22fecb-7eb9-4636-88aa-9aa9e4d7f4e3](https://github.com/user-attachments/assets/149ff574-bf79-4d89-a0f7-c70df3fc767c)
@@ -1274,8 +1276,6 @@ O **pinpad** é um sistema embarcado porque possui hardware dedicado, firmware p
 O **PDV (software de caixa)**, por outro lado, não é um sistema embarcado. Ele é uma aplicação rodando sobre um sistema operacional de propósito geral (Windows, Linux, Android, etc.), com acesso a recursos amplos do sistema, banco de dados, rede, periféricos e integrações externas como ERP, CRM e APIs.
 
 Já a conexão entre pinpad e PDV seja USB, serial, Ethernet ou Bluetooth é apenas um **canal de comunicação** que implementa um **protocolo**, normalmente definido pelo fabricante do pinpad ou pela TEF House. Esse protocolo especifica mensagens, estados, timeouts e códigos de resposta, mas não caracteriza, por si só, um sistema embarcado. Ele não executa lógica própria nem toma decisões; apenas transporta dados e comandos.
-
-> Em resumo: o **sistema embarcado é o pinpad**; o **PDV é um software de aplicação**; e a **ligação entre eles é um protocolo de comunicação**, não um sistema embarcado. Essa separação é justamente o que permite manter o ambiente crítico (dados sensíveis do cartão) isolado no hardware certificado, enquanto o restante do fluxo fica no domínio do software comercial.
 
 Alguns dados importantes para inicializar o Linx TEF House:
 
