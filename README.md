@@ -27,10 +27,10 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 > É importantíssimo que nesse cenário de System Design (Infraestrutura) seja aplicado com boas técnicas de Design Patterns, Arquiteturas de Software, DDD + TDD + BDD, assim como padrões de microsserviços.
 
 > [!Tip]
-> Uma dica que vale a pena ser citada, é que cada negócio funciona de um forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
+> Uma dica que vale a pena ser citada, é que cada negócio funciona de uma forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
 
 # 💰 POS - Point of Sale
-<a href=""><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
+<a href="https://stripe.com/br/resources/more/point-of-sale-pos-systems-explained-a-guide-for-businesses"><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
 Um ponto crucial nessa integração, é o **POS - Point of Sale (PDV - Ponto de Venda)** é um sistema utilizado por empresas para processar vendas e transações com clientes. Ele combina hardware e software para ajudar a gerenciar diversas operações no ponto de venda, como registrar compras, processar pagamentos (cartão de crédito, débito, dinheiro, e pagamentos móveis), emitir recibos e monitorar o estoque. 
 
