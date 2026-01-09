@@ -1182,7 +1182,7 @@ Tipos de Chave:
 > 🚧 **Ambiente de Sandbox**: O ambiente de testes é aplicável somente no ambiente de criação de pedidos na API do Pagar.me. Dado que não possuímos ambiente de testes na Stone, os pedidos criados no Pagar.me em ambiente de Sandbox não serão refletidos no POS. Com isso, não possuímos um ambiente de Sandbox para realizar testes de ponta a ponta no Connect Stone. e os pedidos devem ser criados diretamente no ambiente de produção.
 
 # 🤑 TEF - Transferência Eletrônica de Fundos
-<a href=""><img src="https://github.com/user-attachments/assets/5493eaab-40b5-4f5c-9619-a3bfe31402a2" align="right" height="177"></a>
+<a href="https://autotef.readme.io/reference/o-que-%C3%A9-o-autotef"><img src="https://github.com/user-attachments/assets/5493eaab-40b5-4f5c-9619-a3bfe31402a2" align="right" height="177"></a>
 
 Caso a integração via API não seja viável, seja por limitações técnicas, regulatórias ou de infraestrutura, a segunda alternativa é a utilização de **Transferência Eletrônica de Fundos (TEF)** que é um sistema de pagamentos que faz a comunicação das transações de forma automática e entre diversas adquirentes (as empresas de cartões). O sistema envia os pagamentos de qualquer tipo de cartão para a liquidação financeira de pagamentos pelas operadoras. 
 
