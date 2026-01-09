@@ -757,7 +757,7 @@ O PayPal é popular devido às suas vantagens, incluindo:
 2. Conveniência: O PayPal permite que usuários façam pagamentos online sem precisar compartilhar informações de cartão de crédito.
 3. Ampla aceitação: O PayPal é aceito em milhões de sites e lojas online em todo o mundo.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" align="right" height="77">
+<a href="https://stripe.io"><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" align="right" height="77"></a>
 
 O **Stripe** é uma plataforma de pagamento online que permite que empresas aceitem pagamentos por meio de cartões de crédito, débito e outras formas de pagamento digital. O Stripe é uma plataforma de pagamento online líder que oferece soluções seguras e flexíveis para empresas que desejam aceitar pagamentos online.
 
