@@ -1071,7 +1071,7 @@ Suas classes Adapter traduzem esses nomes nos MESMOS métodos definidos no `Paym
 Por quê? Evitar a criação de objetos dispersos e manter a responsabilidade única.
 
 ## [Gateway] API Connect Stone 2.0
-<img src="https://github.com/user-attachments/assets/96aeb644-10e9-484b-80ba-6dc99b8b1748" align="right" height="77">
+<a href="https://connect-stone.stone.com.br/docs/o-que-%C3%A9-a-api-connect-20?_ga=2.23075187.855846772.1767986094-1238080663.1767974833&_gl=1*19818wb*_gcl_au*MTg0NjM3NzIzNS4xNzY3OTg2Njg5*_ga*MTIzODA4MDY2My4xNzY3OTc0ODMz*_ga_9CZMEZM0V5*czE3Njc5ODY2ODgkbzEkZzEkdDE3Njc5ODY4MzIkajYwJGwwJGgw"><img src="https://github.com/user-attachments/assets/96aeb644-10e9-484b-80ba-6dc99b8b1748" align="right" height="77"></a>
 
 O **Connect Stone** é uma camada de integração entre o sistema do Cliente / Parceiro, podendo ser uma Plataforma de Ecommerce ou um PDV, com o POS. Tem como objetivo realizar a automação entre os sistemas - Gerenciamento e Pagamento - e a integração entre canais - Físico e Digital. Essa é uma solução de conexão de sistemas de uma forma simples, rápida e completa às maquininhas Stone. 
 
