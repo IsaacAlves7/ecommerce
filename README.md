@@ -693,7 +693,7 @@ O Stripe é popular entre empresas devido às suas vantagens, incluindo:
 2. Flexibilidade: O Stripe pode ser personalizado para atender às necessidades específicas de cada empresa.
 3. Integração fácil: O Stripe oferece APIs e ferramentas para facilitar a integração com plataformas e sistemas existentes.
 
-<img src="https://github.com/user-attachments/assets/f7bce4a2-bf5d-42ea-ad0b-0b367de29f07" align="right" height="77">
+<img src="https://github.com/user-attachments/assets/bf0d6bc5-8f69-4d6c-acbd-01c00e8f69cf" align="right" height="77">
 
 A **Stone** é uma empresa brasileira de tecnologia e serviços financeiros que atua principalmente no setor de pagamentos eletrônicos. Fundada em 2012, a Stone oferece soluções para empresas processarem pagamentos por meio de cartões de crédito e débito, além de uma série de serviços financeiros voltados para o crescimento de negócios, especialmente no mercado de pequenos e médios empresários. A Stone é reconhecida por suas maquininhas de cartão e por seu foco em atendimento ao cliente e inovação tecnológica.
 
