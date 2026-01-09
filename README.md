@@ -1248,7 +1248,7 @@ O **AutoTEF** é um SDK .Net que permite realizar pagamentos (Débito, Crédito,
 
 Para se integrar com a SDK da Stone, você precisa passar por três etapas:
 
-<a href="https://blog.vindi.com.br/tef/"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
+<a href="https://ajuda.stone.com.br/tef/o-que-e-tef"><img src="https://github.com/user-attachments/assets/066b3faf-6655-4e91-bfef-b1f4c4157d46"></a><br>
 
 1. Integração: Nessa fase ainda não é necessário ser cliente cadastrado para enviar requisições. Possuímos um ambiente de sandbox (testes), onde é possível testar todas as situações que ocorrem em produção, como transações negadas e timeout. Para receber uma credencial de integração é necessário se cadastrar no nosso programa de parcerias. Cadastre-se aqui.
 
