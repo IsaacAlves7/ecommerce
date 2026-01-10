@@ -727,6 +727,30 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
 > [!Important]
 > A escolha entre um gateway de pagamento e uma plataforma de pagamento online (ou intermediadora de pagamentos) depende do modelo de negócio, volume de transações e do nível de controle que você deseja. Mas se a pergunta é qual oferece mais lucro, a resposta é: Para negócios com grande volume e estrutura própria, o gateway de pagamento costuma gerar mais lucro líquido a longo prazo, porque as taxas são menores e você tem mais controle sobre a operação.
 
+10 princípios para construir sistemas de pagamento resilientes (pela Shopify). A Shopify tem algumas dicas valiosas para construir sistemas de pagamento resilientes:
+
+![unnamed](https://github.com/user-attachments/assets/fe05a6f5-e07c-4f73-8765-77b6af722354)
+
+1. Reduza os tempos limite e permita que o serviço falhe antecipadamente: O tempo limite padrão é de 60 segundos. Com base na experiência da Shopify, tempos limite de leitura de 5 segundos e de gravação de 1 segundo são configurações adequadas.
+
+2. Instale disjuntores (circuit breakers): A Shopify desenvolveu o Semian para proteger os serviços Net::HTTP, MySQL, Redis e gRPC com um disjuntor em Ruby.
+
+3. Gerenciamento de capacidade: Se 50 solicitações chegarem à nossa fila e levar uma média de 100 milissegundos para processar uma solicitação, nossa taxa de transferência será de 500 solicitações por segundo.
+
+4. Adicione monitoramento e alertas: O livro de Engenharia de Confiabilidade de Sites (SRE) do Google lista quatro sinais de ouro que um sistema voltado para o usuário deve monitorar: latência, tráfego, erros e saturação.
+
+5. Implemente registro estruturado: Armazenamos os registros em um local centralizado e os tornamos facilmente pesquisáveis.
+
+6. Use chaves de idempotência: Use o Identificador Universalmente Único e Classificável Lexicograficamente (ULID) para essas chaves de idempotência em vez de um UUID versão 4 aleatório.
+
+7. Mantenha a consistência na reconciliação: Armazene as divergências de reconciliação com os parceiros financeiros da Shopify no banco de dados.
+
+8. Incorpore testes de carga: A Shopify simula regularmente grandes volumes de vendas relâmpago para obter resultados de referência.
+
+9. Gerencie incidentes com eficiência: Cada canal de incidentes possui 3 funções: Gerente de Incidentes de Plantão (IMOC), Gerente de Resposta de Suporte (SRM) e proprietários de serviço.
+
+10. Organize retrospectivas de incidentes: Para cada incidente, 3 perguntas são feitas na Shopify: O que exatamente aconteceu? Quais suposições incorretas tínhamos sobre nossos sistemas? O que podemos fazer para evitar que isso aconteça?
+
 ## [Gateway] Plataformas de pagamento eletrônico
 <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
 
