@@ -1285,6 +1285,8 @@ Para se integrar com a SDK da Stone, você precisa passar por três etapas:
 
 3. Produção: Ao final da homologação, você receberá o nosso OK para ir para produção. Neste momento o Gerente Comercial Stone responsável por sua parceria conosco irá disponibilizar o manual do parceiro contendo todas as informações necessárias para que sua operação cresça com a gente. Caso já tenha se cadastrado no nosso programa de parcerias, entre em contato com seu Gerente Comercial na Stone ou através do email integracoes.parcerias@stone.com.br. Caso ainda não tenha se cadastrado, você consegue fazê-lo aqui.
 
+<div align="center"><img src="https://github.com/user-attachments/assets/410cf43b-d8b6-4a72-804e-d09a4bbf9272"></div>
+
 Para entender melhor os termos utilizados em nossa documentação, aqui estão a definicação de alguns conceitos da Stone. Veja alguns dados importantes para inicializar o SDK da Stone:
 
 ```txt
