@@ -733,7 +733,7 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
 
 1. Reduza os tempos limite e permita que o serviço falhe antecipadamente: O tempo limite padrão é de 60 segundos. Com base na experiência da Shopify, tempos limite de leitura de 5 segundos e de gravação de 1 segundo são configurações adequadas.
 
-2. Instale disjuntores (circuit breakers): A Shopify desenvolveu o Semian para proteger os serviços Net::HTTP, MySQL, Redis e gRPC com um disjuntor em Ruby.
+2. Instale disjuntores (<a href="https://github.com/IsaacAlves7/microservices/blob/main/README.md#microservices-circuit-breaker">circuit breakers</a>): A Shopify desenvolveu o Semian para proteger os serviços Net::HTTP, MySQL, Redis e gRPC com um disjuntor em Ruby.
 
 3. Gerenciamento de capacidade: Se 50 solicitações chegarem à nossa fila e levar uma média de 100 milissegundos para processar uma solicitação, nossa taxa de transferência será de 500 solicitações por segundo.
 
