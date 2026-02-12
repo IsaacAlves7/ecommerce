@@ -61,6 +61,8 @@ Já a conexão entre pinpad e PDV seja USB, serial, Ethernet ou Bluetooth é ape
 
 A comunicação entre um pinpad e um PDV via USB, serial, Ethernet ou Bluetooth — normalmente se dá por protocolos proprietários ou semi-abertos definidos pelo fabricante do pinpad ou pela TEF House. Não existe um único protocolo universal, mas alguns padrões e conceitos são comuns. Vou detalhar:
 
+![ij3l7oox1](https://github.com/user-attachments/assets/0ab546e5-fd4b-4570-a2e3-2b1356cca885)
+
 1. **Protocolo de baixo nível (camada física e de enlace):**
 
    * Se a conexão é **USB**, é usado o padrão USB HID (Human Interface Device) ou CDC (Communications Device Class), dependendo do pinpad.
