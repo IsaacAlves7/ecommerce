@@ -43,7 +43,11 @@ Além de transações financeiras, um sistema POS pode integrar funções adicio
 
 Então, o hardware de um POS geralmente inclui dispositivos como um terminal de vendas (caixa registradora), **leitores de cartões (PIN pads - Terminais POS - Maquininhas)**, scanners de código de barras, e impressoras de recibos. O software do POS é o que gerencia todo o processo de venda e as operações relacionadas. 
 
-Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
+![i06w0oap1](https://github.com/user-attachments/assets/45501911-b852-49bf-808c-f84473229b8d)
+
+Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. 
+
+Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
 
 O sistema embarcado é o pinpad, o **PDV é um software de aplicação** e a ligação entre eles é um protocolo de comunicação, não um sistema embarcado. Essa separação é justamente o que permite manter o ambiente crítico (dados sensíveis do cartão) isolado no hardware certificado, enquanto o restante do fluxo fica no domínio do software comercial.
 
