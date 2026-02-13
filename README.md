@@ -43,8 +43,6 @@ Além de transações financeiras, um sistema POS pode integrar funções adicio
 
 Então, o hardware de um POS geralmente inclui dispositivos como um terminal de vendas (caixa registradora), **leitores de cartões (PIN pads - Terminais POS - Maquininhas)**, scanners de código de barras, e impressoras de recibos. O software do POS é o que gerencia todo o processo de venda e as operações relacionadas. 
 
-![i06w0oap1](https://github.com/user-attachments/assets/45501911-b852-49bf-808c-f84473229b8d)
-
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. 
 
 Um gateway de pagamento é uma tecnologia que permite a comunicação entre o sistema de pagamento de um comerciante (como uma loja online, uma aplicação de vendas ou um terminal de ponto de venda) e as redes financeiras que processam os pagamentos (como bancos, operadoras de cartões de crédito ou outras instituições financeiras). Essencialmente, o gateway de pagamento é responsável por autenticar, autorizar e processar transações de pagamento, garantindo que o dinheiro seja transferido corretamente entre o cliente e o comerciante.
@@ -86,13 +84,15 @@ A comunicação entre um pinpad e um PDV via USB, serial, Ethernet ou Bluetooth 
    * Alguns são **binários**, outros **ASCII/texto**, dependendo do fabricante.
    * Ele não é “embarqueado” no sentido de um sistema operacional; o pinpad apenas processa os comandos conforme definido.
 
+![i06w0oap1](https://github.com/user-attachments/assets/45501911-b852-49bf-808c-f84473229b8d)
+
 Resumindo: a conexão física pode ser USB, serial, Ethernet ou Bluetooth, mas o **protocolo relevante é o de aplicação definido pelo pinpad/TEF**, que é um protocolo proprietário de mensagens para operações financeiras, normalmente do tipo request-response. Não há um padrão universal formal, apenas normas internas da TEF House ou fabricante.
 
-No Brasil, quando falamos de PDV conversando com pinpad, quase nunca existe um “padrão universal”. O que existe é um ecossistema de protocolos proprietários, criados por **fabricantes de pinpad** e **TEF Houses**, todos seguindo a mesma ideia conceitual, mas com diferenças suficientes para impedir interoperabilidade direta sem adaptação.
+No Brasil, quando falamos de PDV conversando com pinpad, quase nunca existe um “padrão universal”. O que existe é um ecossistema de protocolos proprietários, criados por *fabricantes de pinpad* e *TEF Houses*, todos seguindo a mesma ideia conceitual, mas com diferenças suficientes para impedir interoperabilidade direta sem adaptação.
 
 Um caso extremamente comum é o **Pay&Go / PayGo (Gertec, Ingenico, Verifone)**. Nesse modelo, o PDV roda uma biblioteca ou serviço local fornecido pela PayGo. O PDV não fala “com o banco”, ele fala com o **middleware TEF**. O protocolo é orientado a mensagens, geralmente em formato **texto estruturado (ASCII)** ou binário leve. O PDV envia algo como “iniciar transação”, passando valor, tipo (crédito, débito), número de parcelas e identificadores do PDV. A partir daí, o pinpad assume completamente o fluxo: exibe telas, captura senha, mostra mensagens de “processando”, e no final devolve um **código de retorno**, NSU, autorização, bandeira e status final. O PDV não decide nada no meio do caminho; ele apenas reage a eventos e respostas. Se o PDV cair no meio da transação, o TEF mantém o estado para permitir estorno ou reconciliação depois.
 
-Outro caso real é o **TEF Discado / TEF IP**, muito usado por adquirentes como Rede, Cielo e Getnet. Aqui o protocolo clássico é baseado em **mensagens texto com campos fixos ou delimitados**, frequentemente herdados de padrões antigos tipo ISO 8583 simplificado. O PDV gera um arquivo ou mensagem com campos numerados (valor, data, hora, tipo de operação, identificador do estabelecimento) e envia para o módulo TEF local, que se comunica com o pinpad e depois com a adquirente. A resposta volta com códigos bem específicos: aprovado, negado, senha incorreta, cartão inválido, timeout, cancelado pelo cliente. Esses códigos são padronizados *dentro daquele ecossistema*, mas mudam de adquirente para adquirente.
+Outro caso real é o **TEF Discado / TEF IP**, muito usado por adquirentes como Rede, Cielo e Getnet. Aqui o protocolo clássico é baseado em mensagens texto com campos fixos ou delimitados, frequentemente herdados de padrões antigos tipo ISO 8583 simplificado. O PDV gera um arquivo ou mensagem com campos numerados (valor, data, hora, tipo de operação, identificador do estabelecimento) e envia para o módulo TEF local, que se comunica com o pinpad e depois com a adquirente. A resposta volta com códigos bem específicos: aprovado, negado, senha incorreta, cartão inválido, timeout, cancelado pelo cliente. Esses códigos são padronizados *dentro daquele ecossistema*, mas mudam de adquirente para adquirente.
 
 Um exemplo ainda mais “baixo nível” é o uso de **pinpads em modo serial puro**, algo que ainda existe em sistemas legados. Aqui o PDV fala diretamente com o pinpad via RS-232 ou USB em modo CDC, usando um protocolo proprietário do fabricante. As mensagens são sequências de bytes com STX/ETX, checksum, ACK/NACK. O PDV manda algo como “0x02 0x30 0x31 0x03 CRC” para iniciar uma venda, e o pinpad responde com pacotes de estado: “aguardando cartão”, “senha incorreta”, “processando”, “transação aprovada”. Isso é muito comum em soluções antigas de automação comercial e exige que o PDV implemente **máquina de estados** na aplicação.
 
@@ -101,6 +101,8 @@ Já em cenários mais modernos, como **Stone, PagSeguro, Mercado Pago**, o padr�
 O ponto importante é que em todos esses casos o protocolo é de aplicação, orientado a mensagens e estados, não é um simples “fio de dados”. Ele define quem tem controle do fluxo, quem pode cancelar, quem mantém o estado da transação e como erros são tratados. E mais: ele é **determinístico e restritivo**, justamente porque estamos lidando com ambiente financeiro, certificações PCI, antifraude e auditoria.
 
 Isso explica por que essa comunicação não caracteriza um sistema embarcado no lado do PDV, mas sim um **dispositivo embarcado no lado do pinpad**. O pinpad tem firmware, sistema operacional embarcado, lógica própria, controle de tela, teclado, criptografia e decisões locais. O PDV apenas orquestra e consome o resultado.
+
+![ibciwy7d1](https://github.com/user-attachments/assets/04de24d2-23b7-4aae-90b6-2327c1d2fcde)
 
 Resumindo com uma frase bem objetiva: o “protocolo PDV ↔ pinpad” no Brasil é quase sempre um protocolo proprietário de aplicação, orientado a mensagens e máquina de estados, encapsulado sobre USB, serial, Ethernet ou Bluetooth, mediado por uma TEF House ou SDK, e projetado para que o PDV nunca tenha controle direto sobre dados sensíveis nem sobre a lógica financeira.
 
