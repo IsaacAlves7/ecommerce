@@ -23,8 +23,9 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 
   <table>
     <tr>
+      <td><img src="https://github.com/user-attachments/assets/9f4910f2-ccb9-4bf5-88ab-484ddbb66a62" height="777"></td>
       <td><img src="https://github.com/user-attachments/assets/e685cff7-a967-44a8-8e7b-8dcabeaf401e"></td>
-      <td><img alt="how-does-payment-gateway-work" src="https://github.com/user-attachments/assets/4b0024f8-8fef-48e5-b872-f5c83d43c41c" /></td>
+      <td><img alt="how-does-payment-gateway-work" src="https://github.com/user-attachments/assets/4b0024f8-8fef-48e5-b872-f5c83d43c41c"></td>
     </tr>
   </table>
 
