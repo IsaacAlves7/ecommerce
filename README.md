@@ -174,6 +174,8 @@ Em resumo, o POS é essencial para a operação de qualquer comércio que precis
 
 Esses tipos de POS ajudam negócios de diferentes tamanhos e setores a gerenciar operações de pagamento, vendas e inventário de acordo com suas necessidades e o nível de mobilidade ou integração exigido. A escolha depende da estrutura, volume de transações e preferências de cada estabelecimento.
 
+![Screenshot_20241214-000236_Instagram](https://github.com/user-attachments/assets/fc488732-4d81-45f4-bfbf-0eb87e1a8a61)
+
 <img src="https://static.wixstatic.com/media/521dfd_2fb7cf0f02e142fdbeb2473a0c4717a1~mv2.png/v1/fill/w_980,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/NetSuite-logo-half-light.png" align="right" height="77">
 
 Partindo pro nosso PDV, o **Oracle NetSuite** é uma plataforma de software empresarial baseada em nuvem que oferece uma gama de aplicações para gestão financeira, ERP (Planejamento de Recursos Empresariais), CRM (Gestão de Relacionamento com o Cliente), e e-commerce. É amplamente utilizado por empresas de diferentes tamanhos para gerenciar operações de negócios de forma integrada. Podemos relacionar o Oracle NetSuite como um sistema de PDV - Ponto de Venda ou ponto de serviço (POS - Point of Sale ou Point of Service) ao utilizar máquinas PIN Pads para realizar vendas. O NetSuite oferece funcionalidades de gerenciamento de vendas, incluindo a integração com dispositivos de pagamento, que podem incluir terminais de cartão, como PIN Pads.
