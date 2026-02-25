@@ -803,9 +803,12 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
 
 10. Organize retrospectivas de incidentes: Para cada incidente, 3 perguntas são feitas na Shopify: O que exatamente aconteceu? Quais suposições incorretas tínhamos sobre nossos sistemas? O que podemos fazer para evitar que isso aconteça?
 
-<img width="514" height="628" alt="image" src="https://github.com/user-attachments/assets/9f84b4d7-0d3d-42c0-9e2f-5f099940950c" />
-
-![unnamed](https://github.com/user-attachments/assets/fbcd4524-9a13-4b2b-9c79-51fa6044e26e)
+<table>
+  <tr>
+    <td><img width="514" height="628" alt="image" src="https://github.com/user-attachments/assets/9f84b4d7-0d3d-42c0-9e2f-5f099940950c" /></td>
+    <td><img src="https://github.com/user-attachments/assets/fbcd4524-9a13-4b2b-9c79-51fa6044e26e"></td>
+  </tr>
+</table>
 
 ## [Gateway] Plataformas de pagamento eletrônico
 <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
