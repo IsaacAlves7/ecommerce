@@ -309,6 +309,30 @@ Passo 15: A rede de cartões decide com base nas evidências e atribui a respons
 
 👉 Para você: a disputa é cara. Como podemos reduzi-lo e tornar o processo mais simplificado?
 
+Qual é a diferença entre pagamentos "pull" e "push"? O diagrama abaixo mostra como funcionam os pagamentos pull e push:
+
+![unnamed](https://github.com/user-attachments/assets/60feae2b-5133-4ccd-94f1-527f90bef5e1)
+
+Quando passamos um cartão de crédito/débito em um comerciante, é um pagamento de pull, onde o dinheiro é enviado do titular do cartão para o comerciante. O comerciante retira dinheiro da conta do titular do cartão, e o titular aprova a transação.
+
+Com o Visa Direct ou Mastercard Send, os pagamentos push possibilitam desembolsos para comerciantes, empresas e governos.
+
+Passo 1: O comerciante inicia o pagamento push por meio de um canal digital. Pode ser um celular ou uma agência bancária, etc.
+
+Passo 2: O banco adquirente cria e submete uma OCT (Transação de Crédito Original) para o esquema de cartão.
+
+Passo 3: A transação é encaminhada para a instituição receptora.
+
+Passo 4: O banco emissor credita a conta do titular do cartão e notifica o titular. O dinheiro é depositado em uma conta Visa que pode ser acessada em um caixa eletrônico, terminal PoS ou uma carteira digital.
+
+Note que os pagamentos push funcionam para transações transfronteiriças.
+
+Os pagamentos push são, de fato, uma inovação interessante, que complementa a estratégia de carteira digital no Visa e Mastercard. A abstração de "conta" esconde a complicação de diferentes canais de financiamento ou consumo.
+
+A conversa é sua: qual é o método de pagamento mais usado com frequência? É baseado em puxão ou em empurrar?
+
+
+
 ## [Card] Serasa Experian
 <img src="https://github.com/user-attachments/assets/bc068b24-dc5e-47d1-864c-ff2c14a62e7b" align="right" height="77">
 
