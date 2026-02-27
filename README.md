@@ -255,6 +255,48 @@ Quando você faz um pedido no Starbucks, o caixa pega o pedido, rabisco seu nome
 
 Esse processamento assíncrono, onde cada etapa não precisa esperar a conclusão da anterior, aumenta significativamente a taxa de transferência do sistema. Por exemplo, o caixa não espera sua bebida ser preparada antes de fazer outro pedido.
 
+Um exemplo de fila de mensagens:
+
+Agora, vamos mudar nosso foco para um exemplo real: vendas flash no comércio eletrônico. Vendas rápidas podem sobrecarregar os sistemas devido ao aumento da atividade dos usuários. Muitas estratégias são empregadas para gerenciar essa demanda, e as filas de mensagens frequentemente desempenham um papel fundamental nas otimizações do backend.
+
+Uma arquitetura simplificada de venda flash de comércio eletrônico está listada na Figura 2.
+
+Passos 1 e 2: Um cliente faz um pedido no serviço de pedido.
+
+Passo 3: Antes de processar o pagamento, o serviço de pedidos reserva o estoque selecionado.
+
+Passo 4: O serviço de pedidos então envia uma instrução de pagamento para o serviço de pagamento. O serviço de pagamento se espalha em 3 serviços: canais de pagamento, notificações e análises.
+
+Passos 5.1 e 6.1: O serviço de pagamento envia a instrução de pagamento para o serviço do canal de pagamento. O serviço de canal de pagamento se comunica com PSPs externos (Provedores de Serviços de Pagamento) para finalizar a transação.
+
+Etapas 5.2 e 6.2: O serviço de pagamento envia uma notificação para o serviço de notificação, que então envia uma notificação ao cliente por e-mail ou SMS.
+
+Passo 5.3: O serviço de pagamento envia os detalhes das transações para o serviço de análise.
+
+![99b74e5a-12ad-4a55-97a1-00b524c3dd02_1503x1600](https://github.com/user-attachments/assets/ed9c7d7a-c670-49d4-bd20-954e6e6377f6)
+
+Um ponto importante aqui é que uma experiência de usuário fluida é crucial durante as vendas flash. Para manter a resposta ao serviço apesar do alto tráfego, filas de mensagens podem ser integradas em múltiplos estágios para garantir desempenho ideal.
+
+Benefícios das Filas de Mensagens
+
+O serviço de pagamento envia dados para três serviços posteriores para diferentes finalidades: canais de pagamento, notificações e análises. Esse método de expansão é como alguém gritando uma mensagem do outro lado da sala; Quem precisa ouvir, tem. O produtor simplesmente deixa a mensagem na fila, e os consumidores processam a mensagem no seu próprio ritmo.
+
+Processamento Assíncrono: Usando a analogia do Starbucks, assim como o caixa não espera o café ser feito, o serviço de pedido não espera os pagamentos serem finalizados. A instrução de pagamento é colocada na fila, e o cliente é notificado assim que ela é finalizada.
+
+Limitação de Taxa: Em uma venda rápida, pode haver dezenas de milhares de usuários simultaneamente fazendo pedidos simultaneamente. É fundamental encontrar um equilíbrio entre acomodar clientes ansiosos e manter a estabilidade do sistema. Uma abordagem comum é limitar o número de solicitações recebidas dentro de um prazo específico para corresponder à capacidade do sistema. Pedidos excedentes podem ser rejeitados ou solicitados a tentar novamente após um pequeno atraso. Essa abordagem garante que o sistema permaneça estável e não seja sobrecarregado. Para requisições que passam, filas de mensagens garantem que sejam processadas de forma eficiente e em ordem. Se uma parte do sistema estiver momentaneamente atrasada, a ordem não é perdida. Fica na fila até poder ser processado. Isso garante um fluxo suave mesmo sob pressão.
+
+Desacoplamento: Nosso design utiliza filas de mensagens em vários lugares. A arquitetura geral é diferente da versão simplificada apresentada na Figura 2. Os serviços interagem entre si usando interfaces de mensagens bem definidas, em vez de depender fortemente uns dos outros. Cada serviço pode ser modificado e implantado de forma independente. Cada componente pode ser desenvolvido em uma linguagem de programação diferente. Isso traz flexibilidade ao design arquitetônico.
+
+Escalabilidade Horizontal: Como os serviços são desacoplados, podemos escalá-los independentemente com base na demanda. Cada serviço pode servir em uma capacidade diferente, então podemos escalar com base no QPS planejado (consulta por segundo) ou TPS (transação por segundo).
+
+Persistência da Mensagem: Filas de mensagens também podem ser usadas como middleware para armazenar mensagens. Se o serviço upstream travar, o serviço downstream sempre pode captar as mensagens da fila para processar. Dessa forma, a função de recuperação é movida para fora de cada serviço e passa a ser responsabilidade da fila de mensagens.
+
+Processamento em Lote: Às vezes, no processo de processamento, precisamos agrupar os dados para obter o resumo. Por exemplo, quando o serviço de pagamento envia atualizações para o serviço de análise, ele não precisa realizar atualizações em tempo real, mas sim configurar uma janela de processamento em lotes. O processamento em lote é o requisito dos serviços posteriores, então não há necessidade do serviço de pagamento saber, basta colocar as mensagens na fila.
+
+Ordenação de Mensagens: Em uma liquidação rápida, há um número limitado de itens de estoque. Por exemplo, uma promoção flash oferece apenas 10 iPhones, mas há mais de 10.000 usuários que fazem o pedido. Como decidimos a ordem? Ter uma fila de mensagens para guardar todos os pedidos terá uma ordem natural: os primeiros 10 da fila receberão o iPhone.
+
+Na Figura 3, juntamos tudo, onde os serviços são conectados por meio de filas de mensagens e desacoplados. Dessa forma, a arquitetura pode alcançar maior taxa de transferência.
+
 # 🏦 Banco
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/bank_1f3e6.png" align="right" height="77">
 
