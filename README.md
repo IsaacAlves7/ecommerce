@@ -39,9 +39,6 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
   </tr>
 </table>
 
-> [!Tip]
-> Uma dica que vale a pena ser citada, é que cada negócio funciona de uma forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
-
 # 💰 POS - Point of Sale
 <a href="https://stripe.com/br/resources/more/point-of-sale-pos-systems-explained-a-guide-for-businesses"><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
@@ -60,6 +57,9 @@ O sistema embarcado é o pinpad, o **PDV é um software de aplicação** e a lig
 Alguns tipos de PINPADs utilizadas em conjunto com o POS:
 
 <a href="https://www.stone.com.br/maquina-de-cartao/"><img src="https://github.com/user-attachments/assets/149ff574-bf79-4d89-a0f7-c70df3fc767c"></a>
+
+> [!Tip]
+> Uma dica que vale a pena ser citada, é que cada negócio funciona de uma forma específica no seu sistema de vendas e comércio, portanto, preste muita atenção na forma de trabalhar!
 
 O pinpad em si é um sistema embarcado, mas a conexão entre o pinpad e o PDV não é considerada um sistema embarcado. Ela é apenas o **meio de comunicação** entre dois sistemas, cada um com seu papel bem definido.
 
