@@ -241,6 +241,20 @@ Temos muitas soluções de pagamentos automatizados para a emição de comprovan
 
 <img width="1100" height="620" alt="pos-(1)" src="https://github.com/user-attachments/assets/b456734c-2f0a-4a57-9bf6-e1644c76d4c2" />
 
+Por que precisamos de uma fila de mensagens?
+
+Vamos mergulhar fundo em um middleware amplamente utilizado: a fila de mensagens.
+
+Filas de mensagens têm uma longa história. Eles são frequentemente usados para comunicação entre diferentes sistemas. A Figura 1 ilustra o conceito de fila de mensagens comparando-o com o funcionamento do Starbucks.
+
+No Starbucks, o caixa pega o pedido e recolhe o dinheiro, depois escreve o nome do cliente em uma xícara de café para entregar para a próxima etapa. A cafeteira pega o pedido e a xícara e prepara café. O cliente então pega o café no balcão. Os três passos funcionam de forma assíncrona. O caixa simplesmente deixa o pedido na forma de uma xícara de café e não espera a conclusão. A cafeteira simplesmente deixa o café pronto no balcão e não espera o cliente pegar.
+
+Quando você faz um pedido no Starbucks, o caixa pega o pedido, rabisco seu nome em um copo e passa para o próximo cliente. Um barista então pega o copo, prepara sua bebida e deixa para você pegar. A beleza desse processo é que cada etapa opera de forma independente. É muito parecido com um sistema assíncrono.
+
+![99c29e25-a0aa-48a0-ba8a-d790f4ac3917_1600x790](https://github.com/user-attachments/assets/77866844-8eb7-46a0-a38b-0eb10ec4fff0)
+
+Esse processamento assíncrono, onde cada etapa não precisa esperar a conclusão da anterior, aumenta significativamente a taxa de transferência do sistema. Por exemplo, o caixa não espera sua bebida ser preparada antes de fazer outro pedido.
+
 # 🏦 Banco
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/bank_1f3e6.png" align="right" height="77">
 
