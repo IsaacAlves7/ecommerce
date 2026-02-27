@@ -779,6 +779,8 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
 > [!Important]
 > A escolha entre um gateway de pagamento e uma plataforma de pagamento online (ou intermediadora de pagamentos) depende do modelo de negócio, volume de transações e do nível de controle que você deseja. Mas se a pergunta é qual oferece mais lucro, a resposta é: Para negócios com grande volume e estrutura própria, o gateway de pagamento costuma gerar mais lucro líquido a longo prazo, porque as taxas são menores e você tem mais controle sobre a operação.
 
+![unnamed](https://github.com/user-attachments/assets/09a8e2b4-01d4-4d65-80be-be4246fc4f75)
+
 10 princípios para construir sistemas de pagamento resilientes (pela Shopify). A Shopify tem algumas dicas valiosas para construir sistemas de pagamento resilientes:
 
 ![unnamed](https://github.com/user-attachments/assets/fe05a6f5-e07c-4f73-8765-77b6af722354)
