@@ -1216,6 +1216,46 @@ Suas classes Adapter traduzem esses nomes nos MESMOS métodos definidos no `Paym
 
 Por quê? Evitar a criação de objetos dispersos e manter a responsabilidade única.
 
+## [Gateway] FedNow 
+JPMorgan, Wells Fargo e outros grandes bancos vão usar o novo sistema de pagamento instantâneo 'FedNow' do Federal Reserve. Vamos ver como funciona.
+
+O Federal Reserve lançou o serviço de pagamento instantâneo FedNow em 20 de julho. Ele permite que clientes de varejo enviem e recebam dinheiro em segundos e está disponível 24 horas por dia, 7 dias por semana.
+
+O que isso significa?
+
+1. Serviços de pagamento peer-to-peer no setor privado, como Venmo ou PayPal, atuam como intermediários entre bancos, então precisamos aproveitar esquemas de pagamento para compensação e sistemas do Fed para liquidação. No entanto, o FedNow pode liquidar diretamente as transações em contas do banco central. [1]
+
+2. O Fedwire, outro sistema de pagamentos em tempo real, ainda funcionará em pagamentos de alto valor ou baixo valor. O FedNow não foi projetado para substituir o Fedwire.
+
+O diagrama abaixo mostra uma comparação entre FedNow e ACH (Câmara de Compensação Automatizada), que é usada em pagamentos domésticos de baixo valor.
+
+![unnamed](https://github.com/user-attachments/assets/6ae65b8e-9b76-4386-99bc-70fcd2eb3ac9)
+
+FedNow [2]
+Passo 0 - Bob quer pagar 1000 dólares para Alice.
+Passo 1 - Bob inicia uma transação de pagamento usando o FedNow.
+Passo 2 - O banco do remetente envia uma mensagem de pagamento para a FedNow.
+Passo 3 - O serviço FedNow valida a mensagem de pagamento.
+Passo 4 - O serviço FedNow envia a mensagem de pagamento para o banco do destinatário, onde ela é confirmada.
+Passo 5 - O banco do destinatário responde ao FedNow, confirmando que o pagamento foi aceito.
+Passo 6 - O serviço FedNow debita e credita as contas designadas dos bancos do remetente e do destinatário.
+Passo 7 - O serviço FedNow notifica o banco do remetente e o banco do receptor que a liquidação está concluída.
+Passo 8 - Os bancos debitam e creditam as contas bancárias.
+
+ACH
+Passo 1 - Bob recebe autorização de Alice para deduzir da conta de Alice.
+Passo 2 - A transação de pagamento é enviada ao banco do destinatário.
+Passo 3 - O banco coleta arquivos em lotes e os envia para o operador ACH.
+Passo 4 - O operador ACH envia os arquivos para o banco do remetente.
+Passo 5 - O banco do remetente retira fundos da conta de Alice.
+Passo 6 - Os fundos retirados são enviados ao operador ACH.
+Passo 7 - O operador ACH distribui fundos para o banco do Bob.
+Passo 8 - Bob recebe o fundo.
+Passo 9 - As instruções de compensação são enviadas para a Fedwire.
+Passo 10 - Fedwire envia transmissões de compensação para bancos para acordos.
+
+Com você: Que tipos de sistemas de pagamento instantâneo seu país oferece?
+
 ## [Gateway] API Connect Stone 2.0
 <a href="https://connect-stone.stone.com.br/docs/o-que-%C3%A9-a-api-connect-20?_ga=2.23075187.855846772.1767986094-1238080663.1767974833&_gl=1*19818wb*_gcl_au*MTg0NjM3NzIzNS4xNzY3OTg2Njg5*_ga*MTIzODA4MDY2My4xNzY3OTc0ODMz*_ga_9CZMEZM0V5*czE3Njc5ODY2ODgkbzEkZzEkdDE3Njc5ODY4MzIkajYwJGwwJGgw"><img src="https://github.com/user-attachments/assets/96aeb644-10e9-484b-80ba-6dc99b8b1748" align="right" height="77"></a>
 
