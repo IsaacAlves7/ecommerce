@@ -399,7 +399,7 @@ Os pagamentos push são, de fato, uma inovação interessante, que complementa a
 
 A conversa é sua: qual é o método de pagamento mais usado com frequência? É baseado em puxão ou em empurrar?
 
-
+![unnamed](https://github.com/user-attachments/assets/6864d32a-d81e-4045-953a-6aba2ee97c96)
 
 ## [Card] Serasa Experian
 <img src="https://github.com/user-attachments/assets/bc068b24-dc5e-47d1-864c-ff2c14a62e7b" align="right" height="77">
