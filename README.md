@@ -39,6 +39,8 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
   </tr>
 </table>
 
+![unnamed](https://github.com/user-attachments/assets/87e0f86f-a805-4a08-9cad-932263bc48dc)
+
 # 💰 POS - Point of Sale
 <a href="https://stripe.com/br/resources/more/point-of-sale-pos-systems-explained-a-guide-for-businesses"><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
