@@ -928,6 +928,29 @@ A **Stone** é uma empresa brasileira de tecnologia e serviços financeiros que 
 - https://online.stone.com.br/docs/o-que-e-o-stone-online
 - Contato da Stone: 3004-9680
 
+## [Gateway] Notifications
+Como funciona um sistema típico de notificação push?
+O diagrama abaixo mostra a arquitetura de um sistema de notificação que cobre os principais canais de notificação:
+
+- Notificações dentro do aplicativo
+- Notificações por e-mail
+- SMS e notificações OTP
+- Campanhas nas redes sociais
+
+![unnamed](https://github.com/user-attachments/assets/2363bfb2-4e02-4eeb-888b-b0595dc5f3a0)
+
+Vamos seguir os passos.
+
+Passos 1.1 e 1.2 - Os serviços empresariais enviam notificações para o gateway de notificações. O gateway pode lidar com dois modos: um modo recebe uma notificação a cada vez, e o outro recebe notificações em lotes.
+
+Etapas 2, 2.1 e 2.2 - O gateway de notificações encaminha as notificações para o serviço de distribuição, onde as mensagens são validadas, formatadas e agendadas com base nas configurações. O repositório de templates de notificação permite que os usuários predefinam o formato da mensagem. O repositório de preferências de canal permite que os usuários predefinam os canais de entrega preferidos.
+
+Passo 3 - As notificações são então enviadas para os roteadores, normalmente filas de mensagens.
+
+Passo 4 - Os serviços de canal se comunicam com diversos canais internos e externos de entrega, incluindo notificações dentro do app, entrega por e-mail, SMS e aplicativos de redes sociais.
+
+Etapas 5 e 6 - As métricas de entrega são capturadas pelo serviço de rastreamento e análise de notificações, onde a equipe de operações pode visualizar os relatórios analíticos e melhorar a experiência dos usuários.
+
 ## [Gateway] Gateway-Independent Payment Provider
 Como projetar uma **Camada de Provedor de Pagamento (Payment Provider Layer)** usando princípios LLD e Padrões de Design para manter a aplicação flexível, extensível e sustentável.
 
