@@ -41,6 +41,17 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 
 ![unnamed](https://github.com/user-attachments/assets/87e0f86f-a805-4a08-9cad-932263bc48dc)
 
+Log Processing and Analysis: Para um site de comércio eletrônico com serviços como carrinho de compras, pedidos e pagamentos, precisamos analisar registros para investigar pedidos de clientes.
+
+![unnamed](https://github.com/user-attachments/assets/7a7eb4b8-80a8-40c2-a615-8eb8b578e036)
+
+O diagrama abaixo mostra uma arquitetura típica que usa a ELK Stack:
+
+- ElasticSearch - indexa logs para busca em texto completo
+- LogStash - agente de coleta de logs
+- Kibana - UI para busca e visualização de logs
+- Kafka - fila de mensagens distribuídas
+
 # 💰 POS - Point of Sale
 <a href="https://stripe.com/br/resources/more/point-of-sale-pos-systems-explained-a-guide-for-businesses"><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
