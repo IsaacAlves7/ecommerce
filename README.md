@@ -63,6 +63,10 @@ O **POS - Point of Sale (PDV - Ponto de Venda)** é um sistema utilizado por emp
 
 Além de transações financeiras, um sistema POS pode integrar funções adicionais, como gerenciamento de inventário, relatórios de vendas e programas de fidelidade de clientes. 
 
+As vendas e relacionamento com clientes não são nada sem softwares para automatizar, controlar, organizar e gerir as informações. Seja de uma transação (compra), ou de um cadastro de um cliente que poderá voltar em seu estabelecimento. Os sistemas para pontos de venda fazem parte dessa gama e são úteis.
+
+O Ponto de Venda (PDV), ou Point of Sale (POS), refere-se ao local onde os produtos são expostos e as vendas são realizadas. Os sistemas de PDV são ferramentas essenciais para gerenciar vendas, controle de estoque e processamento de transações. Eles permitem que as empresas registrem informações sobre produtos, apliquem descontos, emitem notas fiscais e controlam o caixa, facilitando a comunicação com o estoque e financeiro. Além disso, os sistemas modernos de PDV oferecem integração com e-commerce e recursos de pagamento, melhorando a experiência do cliente e a eficiência operacional.
+
 Então, o hardware de um POS geralmente inclui dispositivos como um terminal de vendas (caixa registradora), **leitores de cartões (PIN pads - Terminais POS - Maquininhas)**, scanners de código de barras, e impressoras de recibos. O software do POS é o que gerencia todo o processo de venda e as operações relacionadas. 
 
 Hoje em dia, muitos POS funcionam também em tablets ou smartphones, conectando-se a **gateways de pagamento** (Stone) para processar as transações com segurança. 
