@@ -34,6 +34,10 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 
 <table>
   <tr>
+    <td>Infraestrutura (IaC)</td>
+    <td>Orquestrador (Kubernetes)</td>
+  </tr>
+  <tr>
     <td><img src="https://github.com/user-attachments/assets/bc9b81a0-265b-4391-b7e9-6247a5e6fd70"></td>
     <td><img src="https://github.com/user-attachments/assets/d38cf7a4-e703-4e04-8d8b-c2e55b50fa2b"></td>
   </tr>
