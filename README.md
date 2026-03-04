@@ -314,6 +314,23 @@ Ordenação de Mensagens: Em uma liquidação rápida, há um número limitado d
 
 Na Figura 3, juntamos tudo, onde os serviços são conectados por meio de filas de mensagens e desacoplados. Dessa forma, a arquitetura pode alcançar maior taxa de transferência.
 
+Database-Backed Queue: Vamos usar nosso exemplo do Starbucks novamente. Os dois requisitos mais importantes são:
+
+- Processamento assíncrono para que o caixa possa pegar o próximo pedido sem esperar.
+- Persistência para que os pedidos dos clientes não sejam perdidos caso haja algum problema.
+
+O pedido por mensagem não importa muito aqui porque as cafeteiras costumam fazer lotes da mesma bebida. A escalabilidade também não é tão importante, já que as filas são restritas a cada unidade Starbucks.
+
+As filas do Starbucks podem ser implementadas em uma tabela de banco de dados. O diagrama abaixo mostra como funciona:
+
+![unnamed](https://github.com/user-attachments/assets/de80d825-6084-4628-a79e-a93a81ef287b)
+
+Quando o caixa aceita um pedido, um novo pedido é criado na fila respaldada pelo banco de dados. O caixa pode então anotar outro pedido enquanto a cafeteira recebe novos pedidos em lotes. Uma vez que o pedido é concluído, a cafeteira marca o feito no banco de informações. O cliente então pega o café no balcão.
+
+Um trabalho de limpeza pode ser executado ao final de cada dia para deletar pedidos completos (ou seja, aqueles com o status "FEITO").
+
+Para o caso de uso da Starbucks, uma fila simples de banco de dados atende aos requisitos sem precisar do Kafka. Uma tabela de ordens com operações CRUD funciona bem.
+
 # 🏦 Banco
 <img src="https://em-content.zobj.net/source/microsoft-teams/400/bank_1f3e6.png" align="right" height="77">
 
