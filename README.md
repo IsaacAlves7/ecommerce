@@ -435,7 +435,27 @@ Os pagamentos push são, de fato, uma inovação interessante, que complementa a
 
 A conversa é sua: qual é o método de pagamento mais usado com frequência? É baseado em puxão ou em empurrar?
 
-![unnamed](https://github.com/user-attachments/assets/6864d32a-d81e-4045-953a-6aba2ee97c96)
+![unnamed](https://github.com/user-attachments/assets/6b23c2ea-dd77-4e50-8599-c5214da4cf55)
+
+1. O titular do cartão paga a um comerciante $100 para comprar um produto.
+
+2. O comerciante se beneficia do uso do cartão de crédito com maior volume de vendas, e precisa compensar o emissor e a rede de cartões pela prestação do serviço de pagamento. O banco adquirente estabelece uma taxa com o comerciante, chamada de "taxa de desconto do comerciante".
+
+3 - 4. O banco adquirente fica com $0,25 como margem adquiridora, e $1,75 é pago ao banco emissor como taxa de intercâmbio. A taxa de desconto para comerciantes deve cobrir a taxa de intercâmbio.
+
+A taxa de intercâmbio é definida pela rede de cartões porque é menos eficiente para cada banco emissor negociar taxas com cada comerciante.
+
+5. A rede de cartões estabelece as avaliações e taxas da rede com cada banco, que paga mensalmente à rede de cartões pelos seus serviços. Por exemplo, a VISA cobra uma avaliação de 0,11%, mais uma taxa de uso de $0,0195, para cada deslize.
+
+6. O titular do cartão paga ao banco emissor pelos seus serviços.
+
+Por que o banco emissor deveria ser compensado?
+
+- O emissor paga ao comerciante mesmo que o titular do cartão não pague o emissor.
+- O emissor paga ao comerciante antes que o titular do cartão pague ao emissor.
+- O emissor tem outros custos operacionais, incluindo gerenciamento de contas de clientes, fornecimento de extratos, detecção de fraudes, gestão de riscos, compensação e liquidação, entre outros.
+
+> A sua conta é que a rede cobra a mesma taxa de intercâmbio para grandes comerciantes que para pequenos comerciantes?
 
 ## [Card] Serasa Experian
 <img src="https://github.com/user-attachments/assets/bc068b24-dc5e-47d1-864c-ff2c14a62e7b" align="right" height="77">
