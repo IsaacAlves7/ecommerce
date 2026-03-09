@@ -45,6 +45,8 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
 
 ![unnamed](https://github.com/user-attachments/assets/87e0f86f-a805-4a08-9cad-932263bc48dc)
 
+Note que design de API não é apenas design de caminhos de URL. Na maioria das vezes, precisamos escolher os nomes de recursos corretos, identificadores e padrões de caminho. É igualmente importante projetar campos de cabeçalho HTTP adequados ou criar regras eficazes de limitação de taxa dentro do gateway da API.
+
 Log Processing and Analysis: Para um site de comércio eletrônico com serviços como carrinho de compras, pedidos e pagamentos, precisamos analisar registros para investigar pedidos de clientes.
 
 ![unnamed](https://github.com/user-attachments/assets/7a7eb4b8-80a8-40c2-a615-8eb8b578e036)
