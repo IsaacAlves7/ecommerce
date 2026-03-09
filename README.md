@@ -873,6 +873,18 @@ Algumas empresas podem oferecer ambas as soluções, atuando como gateway de pag
 
 - <a href="">Rede</a>
 
+Como startups fintech encontram novas oportunidades entre tantas empresas de pagamento? O que exatamente PayPal, Stripe e Square fazem?
+
+Etapas 0-1: O titular do cartão abre uma conta no banco emissor e recebe o cartão de débito/crédito. O comerciante se registra junto à ISO (Independent Sales Organization) ou MSP (Member Service Provider) para vendas em lojas. ISO/MSP faz parceria com processadores de pagamento para abrir contas de comerciantes.
+
+Etapas 2-5: O processo de aquisição.
+O gateway de pagamento aceita a transação de compra e coleta as informações de pagamento. Depois, é enviado para um processador de pagamentos, que utiliza informações dos clientes para coletar pagamentos. O processador adquirente envia a transação para a rede de cartões. Também possui e opera a conta do comerciante durante a liquidação, o que não acontece em tempo real.
+
+Etapas 6-8: O processo de emissão.
+O processador emissor conversa com a rede de cartões em nome do banco emissor. Ela valida e opera a conta do cliente.
+
+Listei algumas empresas em diferentes setores no diagrama. Repare que as empresas de pagamento geralmente começam em um único segmento, mas depois expandem para vários setorais.
+
 Um gateway de pagamento oferece várias funcionalidades, incluindo:
 
 1. Processamento de transações: O gateway de pagamento processa as transações de pagamento em tempo real.
