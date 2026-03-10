@@ -940,6 +940,33 @@ Pense no gateway como a "maquininha virtual" que processa pagamentos, enquanto a
   </tr>
 </table>
 
+Como você paga com sua carteira digital, como PayPal, Paytm e Venmo, escaneando o código QR?
+
+![unnamed](https://github.com/user-attachments/assets/b61fe702-1992-4a4d-935a-4dd4b8081185)
+
+Para entender o processo envolvido, precisamos dividir o processo "scan to pay" em dois subprocessos:
+
+1. O comerciante gera um código QR e o exibe na tela
+2. O consumidor escaneia o código QR e paga
+
+Aqui estão os passos para gerar o código QR:
+
+1. Quando você quer pagar suas compras, o caixa contabiliza todos os produtos e calcula o valor total devido, por exemplo, $123,45. O caixa tem um ID de pedido SN129803. O caixa clica no botão "checkout".
+2. O computador do caixa envia o ID do pedido e o valor para o PSP.
+3. O PSP salva essas informações no banco de dados e gera uma URL de código QR.
+4. O serviço Payment Gateway do PSP lê a URL do código QR.
+5. O gateway de pagamento retorna a URL do código QR para o computador do comerciante.
+6. O computador do comerciante envia a URL do QR code (ou imagem) para o caixa.
+7. O caixa exibe o código QR.
+
+Esses 7 passos são concluídos em menos de um segundo. Agora é a vez do consumidor pagar com sua carteira digital escaneando o código QR:
+
+1. O consumidor abre seu aplicativo de carteira digital para escanear o código QR.
+2. Após confirmar que o valor está correto, o cliente clica no botão "pagar".
+3. O aplicativo da carteira digital notifica o PSP que o consumidor pagou o QR code fornecido.
+4. O gateway de pagamento PSP marca esse QR code como pago e retorna uma mensagem de sucesso ao aplicativo de carteira digital do consumidor.
+5. O gateway de pagamento PSP notifica o comerciante que o consumidor pagou o código QR fornecido.
+
 ## [Gateway] Plataformas de pagamento eletrônico
 <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
 
