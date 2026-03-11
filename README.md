@@ -38,12 +38,16 @@ Antes de explicar como funciona nossa aplicação, vamos explicar alguns termos 
     <td>Orquestrador (Kubernetes)</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/bc9b81a0-265b-4391-b7e9-6247a5e6fd70"></td>
-    <td><img src="https://github.com/user-attachments/assets/d38cf7a4-e703-4e04-8d8b-c2e55b50fa2b"></td>
+    <td><img src="https://github.com/user-attachments/assets/bc9b81a0-265b-4391-b7e9-6247a5e6fd70" height="777"></td>
+    <td><img src="https://github.com/user-attachments/assets/d38cf7a4-e703-4e04-8d8b-c2e55b50fa2b" height="777"></td>
   </tr>
 </table>
 
 Note que design de API não é apenas design de caminhos de URL. Na maioria das vezes, precisamos escolher os nomes de recursos corretos, identificadores e padrões de caminho. É igualmente importante projetar campos de cabeçalho HTTP adequados ou criar regras eficazes de limitação de taxa dentro do gateway da API.
+
+Tecnologias base:
+
+![Screenshot_20241129-114020_Facebook](https://github.com/user-attachments/assets/0c3acbf7-5ff2-4880-9317-6f08d4cfc8bd)
 
 Log Processing and Analysis: Para um site de comércio eletrônico com serviços como carrinho de compras, pedidos e pagamentos, precisamos analisar registros para investigar pedidos de clientes.
 
