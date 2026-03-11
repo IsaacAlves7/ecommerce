@@ -7,7 +7,7 @@
 
 Esse repositório é focado em soluções de projetos financeiros, de integrações com plataformas de pagamento e emissão de notas, e transações bancárias via APIs ou SDKs, para comércios eletrônicos (Ecommerces e Ebusiness) ou payments através de POS - Ponto de Venda.
 
-O projeto de integração do CRM e ERP, como por exemplo, o Pipefy e Oracle NetSuite POS com o Gateway de Pagamentos ou plataforma de pagamentos como a Stone para realizar a emição de notas dos comprovantes da compra de produtos para os clientes da loja. 
+O projeto de integração do CRM, ERP e BPMS, como por exemplo, o Pipefy e Oracle NetSuite POS com o Gateway de Pagamentos ou plataforma de pagamentos como a Stone para realizar a emição de notas dos comprovantes da compra de produtos para os clientes da loja. 
 
 Portanto, o nosso objetivo é evitar toda a parte manual entre vendedor e cliente, e automatizar o máximo possível as transações de vendas com as soluções mais modernas utilizadas no mercado na nossa aplicação em produção. O diagrama acima, é usado para a melhor compreensão do projeto.
 
