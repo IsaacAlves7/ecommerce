@@ -433,9 +433,13 @@ Note que os pagamentos push funcionam para transações transfronteiriças.
 
 Os pagamentos push são, de fato, uma inovação interessante, que complementa a estratégia de carteira digital no Visa e Mastercard. A abstração de "conta" esconde a complicação de diferentes canais de financiamento ou consumo.
 
-A conversa é sua: qual é o método de pagamento mais usado com frequência? É baseado em puxão ou em empurrar?
+A conversa é sua: qual é o método de pagamento mais usado com frequência? É baseado em puxão ou em empurrar?  
+
+Por que o cartão de crédito é chamado de "o produto mais lucrativo dos bancos"? Como a VISA/Mastercard gera dinheiro?
 
 ![unnamed](https://github.com/user-attachments/assets/6b23c2ea-dd77-4e50-8599-c5214da4cf55)
+
+O diagrama abaixo mostra a economia do fluxo de pagamento por cartão de crédito.
 
 1. O titular do cartão paga a um comerciante $100 para comprar um produto.
 
