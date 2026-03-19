@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
+            allowedHeaders: "*"
+      routes:
+        - id: pos-service
+          uri: ${POS_SERVICE_URL:http://pos-service:8081}
+          predicates:
+            - Path=/api/v1/sales/**, /api/v1/products/**
+          filters:
+            - StripPrefix=0
+
+        - id: nfce-service
+          uri: ${NFCE_SERVICE_URL:http://nfce-service:8082}
+          predicates:
+            - Path=/api/v1/nfce/**
+          filters:
+            - StripPrefix=0
+
+        # Swagger aggregation
+        - id: pos-swagger
+          uri: ${POS_SERVICE_URL:http://pos-service:8081}
+          predicates:
+            - Path=/pos-docs/**
+          filters:
+            - RewritePath=/pos-docs/(?<segment>.*), /$\{segment}
+
+        - id: nfce-swagger
+          uri: ${NFCE_SERVICE_URL:http://nfce-service:8082}
+          predicates:
+            - Path=/nfce-docs/**
+          filters:
+            - RewritePath=/nfce-docs/(?<segment>.*), /$\{segment}
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,gateway,info

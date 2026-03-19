@@ -1,0 +1,240 @@
+version: '3.8'
+
+# ═══════════════════════════════════════════════════════════════
+#  POS System — Microservices with NFC-e & Email Notification
+#  Services: POS | NFC-e | Notification | API Gateway
+#  Infrastructure: Kafka | Zookeeper | PostgreSQL x2 | ELK Stack
+# ═══════════════════════════════════════════════════════════════
+
+services:
+
+  # ─── Zookeeper ──────────────────────────────────────────────
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: pos-zookeeper
+    restart: unless-stopped
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+    networks: [pos-network]
+
+  # ─── Apache Kafka ────────────────────────────────────────────
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: pos-kafka
+    restart: unless-stopped
+    depends_on: [zookeeper]
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks: [pos-network]
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # ─── Kafka UI ────────────────────────────────────────────────
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: pos-kafka-ui
+    restart: unless-stopped
+    depends_on: [kafka]
+    ports:
+      - "8090:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: pos-cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+    networks: [pos-network]
+
+  # ─── PostgreSQL — POS Service ────────────────────────────────
+  pos-db:
+    image: postgres:16-alpine
+    container_name: pos-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: posdb
+      POSTGRES_USER: pos_user
+      POSTGRES_PASSWORD: pos_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pos_db_data:/var/lib/postgresql/data
+    networks: [pos-network]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pos_user -d posdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── PostgreSQL — NFC-e Service ──────────────────────────────
+  nfce-db:
+    image: postgres:16-alpine
+    container_name: nfce-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nfcedb
+      POSTGRES_USER: nfce_user
+      POSTGRES_PASSWORD: nfce_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - nfce_db_data:/var/lib/postgresql/data
+    networks: [pos-network]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nfce_user -d nfcedb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Elasticsearch ───────────────────────────────────────────
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: pos-elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks: [pos-network]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # ─── Logstash ────────────────────────────────────────────────
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.11.0
+    container_name: pos-logstash
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    volumes:
+      - ./docker/logstash/pipeline:/usr/share/logstash/pipeline
+    networks: [pos-network]
+
+  # ─── Kibana ──────────────────────────────────────────────────
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    container_name: pos-kibana
+    restart: unless-stopped
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks: [pos-network]
+
+  # ─── POS Service ─────────────────────────────────────────────
+  pos-service:
+    build:
+      context: ./pos-service
+      dockerfile: Dockerfile
+    container_name: pos-service
+    restart: unless-stopped
+    depends_on:
+      pos-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      DB_USER: pos_user
+      DB_PASS: pos_pass
+      SPRING_DATASOURCE_URL: jdbc:postgresql://pos-db:5432/posdb
+      KAFKA_BOOTSTRAP: kafka:9092
+    ports:
+      - "8081:8081"
+    networks: [pos-network]
+
+  # ─── NFC-e Service ───────────────────────────────────────────
+  nfce-service:
+    build:
+      context: ./nfce-service
+      dockerfile: Dockerfile
+    container_name: nfce-service
+    restart: unless-stopped
+    depends_on:
+      nfce-db:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      DB_USER: nfce_user
+      DB_PASS: nfce_pass
+      SPRING_DATASOURCE_URL: jdbc:postgresql://nfce-db:5432/nfcedb
+      KAFKA_BOOTSTRAP: kafka:9092
+      WEBHOOK_URL: ${WEBHOOK_URL:-}
+      WEBHOOK_SECRET: ${WEBHOOK_SECRET:-}
+    ports:
+      - "8082:8082"
+    networks: [pos-network]
+
+  # ─── Notification Service ────────────────────────────────────
+  notification-service:
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    container_name: notification-service
+    restart: unless-stopped
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+      SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-your-email@gmail.com}
+      SMTP_PASS: ${SMTP_PASS:-your-app-password}
+      SMTP_FROM: ${SMTP_FROM:-noreply@pos-system.com}
+    ports:
+      - "8083:8083"
+    networks: [pos-network]
+
+  # ─── API Gateway (Spring Cloud Gateway) ─────────────────────
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    restart: unless-stopped
+    depends_on:
+      - pos-service
+      - nfce-service
+    ports:
+      - "8080:8080"
+    environment:
+      POS_SERVICE_URL: http://pos-service:8081
+      NFCE_SERVICE_URL: http://nfce-service:8082
+    networks: [pos-network]
+
+volumes:
+  zookeeper_data:
+  kafka_data:
+  pos_db_data:
+  nfce_db_data:
+  elasticsearch_data:
+
+networks:
+  pos-network:
+    driver: bridge

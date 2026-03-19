@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: nfce-service
+
+  datasource:
+    url: jdbc:postgresql://nfce-db:5432/nfcedb
+    username: ${DB_USER:nfce_user}
+    password: ${DB_PASS:nfce_pass}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:kafka:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+
+server:
+  port: 8082
+
+webhook:
+  nfce:
+    url: ${WEBHOOK_URL:}
+    secret: ${WEBHOOK_SECRET:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    com.nfce: DEBUG
