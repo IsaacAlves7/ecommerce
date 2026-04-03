@@ -1,8 +1,9 @@
-# CashFlow — Sistema de Cash-in e Cash-out em Elixir
+# 🛒 CashFlow — Sistema de Cash-in e Cash-out em Elixir
+<img src="https://img.shields.io/badge/Nubank-NPM-512BD4?style=flat&logo=Nubank&logoColor=white"> <img src="https://img.shields.io/badge/Bitcoin-NPM-gold?style=flat&logo=Bitcoin&logoColor=white"> <img src="https://img.shields.io/badge/Solidity-NPM-00ADD8?style=flat&logo=Solidity&logoColor=white"> <img src="https://img.shields.io/badge/PicPay-NPM-512BD4?style=flat&logo=PicPay&logoColor=white"> <img src="https://img.shields.io/badge/Mastercard-NPM-orange?style=flat&logo=Mastercard&logoColor=white"> <img src="https://img.shields.io/badge/PIX-NPM-cyan?style=flat&logo=Pix&logoColor=white">
 
-Sistema financeiro de Cash-in e Cash-out desenvolvido em Elixir, utilizando
-**GenServer**, **DynamicSupervisor**, **Registry** e o padrão OTP para
-gerenciamento de contas concorrentes e tolerantes a falhas.
+<a href="https://github.com/IsaacAlves7/ecommerce"><img src="https://em-content.zobj.net/source/microsoft-teams/400/shopping-cart_1f6d2.png" align="right" height="77"></a>
+
+Um sistema de Cash-in e Cash-out robusto em Elixir, com GenServer, supervisão de processos e histórico de transações. Sistema financeiro de Cash-in e Cash-out desenvolvido em Elixir, utilizando **GenServer**, **DynamicSupervisor**, **Registry** e o padrão OTP para gerenciamento de contas concorrentes e tolerantes a falhas.
 
 ## Arquitetura
 
