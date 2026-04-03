@@ -4,8 +4,6 @@ Sistema financeiro de Cash-in e Cash-out desenvolvido em Elixir, utilizando
 **GenServer**, **DynamicSupervisor**, **Registry** e o padrão OTP para
 gerenciamento de contas concorrentes e tolerantes a falhas.
 
----
-
 ## Arquitetura
 
 ```
@@ -20,8 +18,6 @@ CashFlow.Application (Supervisor)
 Cada conta é um **processo independente** identificado por um ID único no
 `Registry`. O `DynamicSupervisor` gerencia o ciclo de vida dos processos,
 garantindo isolamento de falhas entre contas.
-
----
 
 ## Estrutura do Projeto
 
@@ -39,8 +35,6 @@ cash_flow/
 └── mix.exs
 ```
 
----
-
 ## Instalação
 
 ```bash
@@ -48,8 +42,6 @@ cd cash_flow
 mix deps.get
 mix compile
 ```
-
----
 
 ## Uso Básico
 
@@ -84,7 +76,6 @@ CashFlow.print_statement("conta_001")
 :ok = CashFlow.close_account("conta_001")
 ```
 
----
 
 ## API Completa
 
@@ -100,8 +91,6 @@ CashFlow.print_statement("conta_001")
 | `print_statement(id)`                      | Imprime extrato formatado no terminal|
 | `close_account(id)`                        | Encerra e remove a conta             |
 
----
-
 ## Respostas de Erro
 
 | Erro                    | Causa                                    |
@@ -110,23 +99,17 @@ CashFlow.print_statement("conta_001")
 | `{:error, :account_already_exists}`| ID de conta já em uso         |
 | `{:error, :insufficient_funds}`    | Saldo insuficiente para saque |
 
----
-
 ## Testes
 
 ```bash
 mix test
 ```
 
----
-
 ## Demo
 
 ```bash
 mix run demo.exs
 ```
-
----
 
 ## Decisões de Design
 
