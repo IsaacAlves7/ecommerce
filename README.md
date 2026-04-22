@@ -842,6 +842,43 @@ define(['N/https', 'N/record'], function(https, record) {
 
 8. Suporte ao cliente e solução de problemas, mantenha contato com seu provedor de gateway de pagamento para solução de problemas ou atualizações sobre alterações de API. Verifique regularmente se há atualizações no firmware do PinPad ou no SuiteApp de integração de pagamento do NetSuite. Conclusão para integrar com sucesso um PinPad ao NetSuite, você precisará garantir a compatibilidade entre o seu PinPad, gateway de pagamento e o sistema de pagamento do NetSuite. Se não existir um SuiteApp pré-construído, pode ser necessário usar as APIs do SuiteScript e do NetSuite para criar soluções personalizadas. Certifique-se sempre de que sua integração seja segura e compatível com os padrões de processamento de pagamentos.
 
+## [Card] Como você paga com sua carteira digital, como PayPal, Venmo, Paytm, escaneando o código QR?
+<img width="1280" height="1780" alt="unnamed" src="https://github.com/user-attachments/assets/c907a002-62cb-4aa5-8ffc-2e3c04964ae2" />
+
+Para entender o processo envolvido, precisamos dividir o processo "scan to pay" em dois subprocessos:
+
+O comerciante gera um código QR e o exibe na tela
+
+O consumidor escaneia o código QR e paga
+
+Aqui estão os passos para gerar o código QR:
+
+Quando você quer pagar suas compras, o caixa contabiliza todos os produtos e calcula o valor total devido, por exemplo, $123,45. O caixa tem um ID de pedido SN129803. O caixa clica no botão "checkout".
+
+O computador do caixa envia o ID do pedido e o valor para o PSP.
+
+O PSP salva essas informações no banco de dados e gera uma URL de código QR.
+
+O serviço Payment Gateway do PSP lê a URL do código QR.
+
+O gateway de pagamento retorna a URL do código QR para o computador do comerciante.
+
+O computador do comerciante envia a URL do QR code (ou imagem) para o caixa.
+
+O caixa exibe o código QR.
+
+Esses 7 passos são concluídos em menos de um segundo. Agora é a vez do consumidor pagar com sua carteira digital escaneando o código QR:
+
+O consumidor abre seu aplicativo de carteira digital para escanear o código QR.
+
+Após confirmar que o valor está correto, o cliente clica no botão "pagar".
+
+O aplicativo da carteira digital notifica o PSP que o consumidor pagou o QR code fornecido.
+
+O gateway de pagamento PSP marca esse QR code como pago e retorna uma mensagem de sucesso ao aplicativo de carteira digital do consumidor.
+
+O gateway de pagamento PSP notifica o comerciante que o consumidor pagou o código QR fornecido.
+
 # 🤝 Payment Gateway
 <img src="https://img.shields.io/badge/Mercado_Pago-NPM-00ACCC?style=flat&logo=Mercado-Pago&logoColor=white"> <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a> <img src="https://img.shields.io/badge/Mercado_Pago-NPM-00ACCC?style=flat&logo=Mercado-Pago&logoColor=white"> <img src="https://img.shields.io/badge/Stripe-NPM-512BD4?style=flat&logo=Stripe&logoColor=white"> <a href="https://medium.com/@prashant558908/paypal-low-level-design-interview-questions-from-recent-interviews-0e1170f2690c"><img src="https://img.shields.io/badge/PayPal-NPM-blue?style=flat&logo=PayPal&logoColor=white"></a>
 
