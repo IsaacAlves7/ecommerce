@@ -60,6 +60,8 @@ O diagrama abaixo mostra uma arquitetura típica que usa a ELK Stack:
 - Kibana - UI para busca e visualização de logs
 - Kafka - fila de mensagens distribuídas
 
+<img width="720" height="622" alt="Screenshot_20240801-181250_Instagram" src="https://github.com/user-attachments/assets/0e526842-bcb9-4172-a2eb-a28d58a0b5bb" />
+
 # 💰 POS - Point of Sale
 <a href="https://stripe.com/br/resources/more/point-of-sale-pos-systems-explained-a-guide-for-businesses"><img src="https://github.com/user-attachments/assets/4614eae8-d3bb-495f-8642-ef90f9dece36" align="right" height="177"></a>
 
